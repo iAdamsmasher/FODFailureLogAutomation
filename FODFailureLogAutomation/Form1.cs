@@ -16,5 +16,10 @@ namespace FODFailureLogAutomation
         {
             InitializeComponent();
         }
+
+        private void labelImgFailure_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
