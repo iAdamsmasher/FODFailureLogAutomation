@@ -41,7 +41,6 @@ namespace FODFailureLogAutomation
             this.pictureBoxFailure = new System.Windows.Forms.PictureBox();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.labelFailureResult = new System.Windows.Forms.Label();
-            this.textBoxMeasCode = new System.Windows.Forms.TextBox();
             this.textBoxFailure = new System.Windows.Forms.TextBox();
             this.labelResult = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace FODFailureLogAutomation
             this.labelImgFailure = new System.Windows.Forms.Label();
             this.groupBoxImgResult = new System.Windows.Forms.GroupBox();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.listBoxMeasCode = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -159,14 +159,6 @@ namespace FODFailureLogAutomation
             this.labelFailureResult.TabIndex = 10;
             this.labelFailureResult.Text = "MEAS CODE";
             // 
-            // textBoxMeasCode
-            // 
-            this.textBoxMeasCode.Location = new System.Drawing.Point(467, 70);
-            this.textBoxMeasCode.Multiline = true;
-            this.textBoxMeasCode.Name = "textBoxMeasCode";
-            this.textBoxMeasCode.Size = new System.Drawing.Size(354, 471);
-            this.textBoxMeasCode.TabIndex = 11;
-            // 
             // textBoxFailure
             // 
             this.textBoxFailure.Location = new System.Drawing.Point(17, 69);
@@ -208,10 +200,10 @@ namespace FODFailureLogAutomation
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.listBoxMeasCode);
             this.groupBox2.Controls.Add(this.labelResult);
             this.groupBox2.Controls.Add(this.labelLowLimit);
             this.groupBox2.Controls.Add(this.labelFailureResult);
-            this.groupBox2.Controls.Add(this.textBoxMeasCode);
             this.groupBox2.Controls.Add(this.textBoxFailure);
             this.groupBox2.Controls.Add(this.textBoxLowLimit);
             this.groupBox2.Controls.Add(this.labelHighLimit);
@@ -238,7 +230,6 @@ namespace FODFailureLogAutomation
             this.labelImgFailure.Size = new System.Drawing.Size(107, 20);
             this.labelImgFailure.TabIndex = 18;
             this.labelImgFailure.Text = "Result Failure";
-
             // 
             // groupBoxImgResult
             // 
@@ -261,6 +252,15 @@ namespace FODFailureLogAutomation
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // listBoxMeasCode
+            // 
+            this.listBoxMeasCode.FormattingEnabled = true;
+            this.listBoxMeasCode.ItemHeight = 20;
+            this.listBoxMeasCode.Location = new System.Drawing.Point(452, 71);
+            this.listBoxMeasCode.Name = "listBoxMeasCode";
+            this.listBoxMeasCode.Size = new System.Drawing.Size(375, 464);
+            this.listBoxMeasCode.TabIndex = 21;
             // 
             // FrmMain
             // 
@@ -306,7 +306,6 @@ namespace FODFailureLogAutomation
         private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.TextBox textBoxFailure;
-        private System.Windows.Forms.TextBox textBoxMeasCode;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelProductName;
@@ -314,6 +313,7 @@ namespace FODFailureLogAutomation
         private System.Windows.Forms.GroupBox groupBoxImgResult;
         private System.Windows.Forms.Label labelImgFailure;
         private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.ListBox listBoxMeasCode;
     }
 }
 

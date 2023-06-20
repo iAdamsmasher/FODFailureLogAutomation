@@ -36,7 +36,6 @@ namespace FODFailureLogAutomation
             string pathDefault = @"C:\prod\temp\" + textBoxTrackId.Text + @"\";
             string fileName = "inline_log.txt";
 
-
             try
             {
                 foreach (string file_name in Directory.GetFiles(pathDefault, fileName, System.IO.SearchOption.AllDirectories))
@@ -46,16 +45,20 @@ namespace FODFailureLogAutomation
                         string line;
                         while ((line = reader.ReadLine()) != null)
                         {
+                            if (line.Contains("fail"))
+                            {
+                                listBoxMeasCode.Items.Add(line);
+                            }
                             if (line.Contains("[MMI_Calibraiton] Calibration Test Result:fail"))
                             {
-                                MessageBox.Show("Log de Falha");
+
                             }
                         }
+
                     }
-
                 }
-
             }
+
             catch
             {
                 MessageBox.Show("TrackId Not Found!!!");
