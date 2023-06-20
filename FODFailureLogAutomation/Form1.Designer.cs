@@ -29,9 +29,6 @@ namespace FODFailureLogAutomation
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.tabPageGodix = new System.Windows.Forms.TabPage();
-            this.tabPageEgis = new System.Windows.Forms.TabPage();
             this.labelTrackId = new System.Windows.Forms.Label();
             this.textBoxTrackId = new System.Windows.Forms.TextBox();
             this.textBoxTrackIdSearched = new System.Windows.Forms.TextBox();
@@ -53,8 +50,7 @@ namespace FODFailureLogAutomation
             this.textBoxImgFailure = new System.Windows.Forms.TextBox();
             this.labelImgFailure = new System.Windows.Forms.Label();
             this.groupBoxImgResult = new System.Windows.Forms.GroupBox();
-            this.tabControlMain.SuspendLayout();
-            this.tabPageGodix.SuspendLayout();
+            this.buttonSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -62,44 +58,11 @@ namespace FODFailureLogAutomation
             this.groupBoxImgResult.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlMain
-            // 
-            this.tabControlMain.Controls.Add(this.tabPageGodix);
-            this.tabControlMain.Controls.Add(this.tabPageEgis);
-            this.tabControlMain.Location = new System.Drawing.Point(273, 12);
-            this.tabControlMain.Name = "tabControlMain";
-            this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(1232, 643);
-            this.tabControlMain.TabIndex = 0;
-            // 
-            // tabPageGodix
-            // 
-            this.tabPageGodix.Controls.Add(this.groupBoxImgResult);
-            this.tabPageGodix.Controls.Add(this.groupBox2);
-            this.tabPageGodix.Controls.Add(this.groupBox1);
-            this.tabPageGodix.Location = new System.Drawing.Point(4, 29);
-            this.tabPageGodix.Name = "tabPageGodix";
-            this.tabPageGodix.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGodix.Size = new System.Drawing.Size(1224, 610);
-            this.tabPageGodix.TabIndex = 0;
-            this.tabPageGodix.Text = "GODIX";
-            this.tabPageGodix.UseVisualStyleBackColor = true;
-            // 
-            // tabPageEgis
-            // 
-            this.tabPageEgis.Location = new System.Drawing.Point(4, 29);
-            this.tabPageEgis.Name = "tabPageEgis";
-            this.tabPageEgis.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEgis.Size = new System.Drawing.Size(1224, 610);
-            this.tabPageEgis.TabIndex = 1;
-            this.tabPageEgis.Text = "EGIS";
-            this.tabPageEgis.UseVisualStyleBackColor = true;
-            // 
             // labelTrackId
             // 
             this.labelTrackId.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.labelTrackId.AutoSize = true;
-            this.labelTrackId.Location = new System.Drawing.Point(80, 21);
+            this.labelTrackId.Location = new System.Drawing.Point(91, 44);
             this.labelTrackId.Name = "labelTrackId";
             this.labelTrackId.Size = new System.Drawing.Size(83, 20);
             this.labelTrackId.TabIndex = 0;
@@ -107,9 +70,9 @@ namespace FODFailureLogAutomation
             // 
             // textBoxTrackId
             // 
-            this.textBoxTrackId.Location = new System.Drawing.Point(27, 44);
+            this.textBoxTrackId.Location = new System.Drawing.Point(18, 67);
             this.textBoxTrackId.Name = "textBoxTrackId";
-            this.textBoxTrackId.Size = new System.Drawing.Size(183, 26);
+            this.textBoxTrackId.Size = new System.Drawing.Size(219, 26);
             this.textBoxTrackId.TabIndex = 1;
             // 
             // textBoxTrackIdSearched
@@ -165,7 +128,7 @@ namespace FODFailureLogAutomation
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::FODFailureLogAutomation.Properties.Resources.LogoFlex;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 523);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 494);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(268, 128);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +139,7 @@ namespace FODFailureLogAutomation
             // 
             this.pictureBoxFailure.Location = new System.Drawing.Point(6, 104);
             this.pictureBoxFailure.Name = "pictureBoxFailure";
-            this.pictureBoxFailure.Size = new System.Drawing.Size(348, 262);
+            this.pictureBoxFailure.Size = new System.Drawing.Size(348, 231);
             this.pictureBoxFailure.TabIndex = 7;
             this.pictureBoxFailure.TabStop = false;
             // 
@@ -236,7 +199,7 @@ namespace FODFailureLogAutomation
             this.groupBox1.Controls.Add(this.labelProductName);
             this.groupBox1.Controls.Add(this.labelTrackIdSearched);
             this.groupBox1.Controls.Add(this.textBoxProductName);
-            this.groupBox1.Location = new System.Drawing.Point(6, 26);
+            this.groupBox1.Location = new System.Drawing.Point(294, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(346, 177);
             this.groupBox1.TabIndex = 15;
@@ -253,7 +216,7 @@ namespace FODFailureLogAutomation
             this.groupBox2.Controls.Add(this.textBoxLowLimit);
             this.groupBox2.Controls.Add(this.labelHighLimit);
             this.groupBox2.Controls.Add(this.textBoxHighLimit);
-            this.groupBox2.Location = new System.Drawing.Point(372, 26);
+            this.groupBox2.Location = new System.Drawing.Point(670, 44);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(827, 578);
             this.groupBox2.TabIndex = 16;
@@ -275,35 +238,46 @@ namespace FODFailureLogAutomation
             this.labelImgFailure.Size = new System.Drawing.Size(107, 20);
             this.labelImgFailure.TabIndex = 18;
             this.labelImgFailure.Text = "Result Failure";
-            this.labelImgFailure.Click += new System.EventHandler(this.labelImgFailure_Click);
+
             // 
             // groupBoxImgResult
             // 
             this.groupBoxImgResult.Controls.Add(this.pictureBoxFailure);
             this.groupBoxImgResult.Controls.Add(this.labelImgFailure);
             this.groupBoxImgResult.Controls.Add(this.textBoxImgFailure);
-            this.groupBoxImgResult.Location = new System.Drawing.Point(6, 232);
+            this.groupBoxImgResult.Location = new System.Drawing.Point(294, 250);
             this.groupBoxImgResult.Name = "groupBoxImgResult";
             this.groupBoxImgResult.Size = new System.Drawing.Size(360, 372);
             this.groupBoxImgResult.TabIndex = 19;
             this.groupBoxImgResult.TabStop = false;
             this.groupBoxImgResult.Text = "IMAGE RESULT";
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(55, 107);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(139, 41);
+            this.buttonSearch.TabIndex = 20;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 667);
+            this.ClientSize = new System.Drawing.Size(1509, 648);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxImgResult);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.labelTrackId);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxTrackId);
-            this.Controls.Add(this.tabControlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FOD FailureLog Automation";
-            this.tabControlMain.ResumeLayout(false);
-            this.tabPageGodix.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -318,10 +292,6 @@ namespace FODFailureLogAutomation
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControlMain;
-        private System.Windows.Forms.TabPage tabPageGodix;
-        private System.Windows.Forms.TabPage tabPageEgis;
         private System.Windows.Forms.TextBox textBoxTrackId;
         private System.Windows.Forms.Label labelTrackId;
         private System.Windows.Forms.Label labelTrackIdSearched;
@@ -343,6 +313,7 @@ namespace FODFailureLogAutomation
         private System.Windows.Forms.TextBox textBoxImgFailure;
         private System.Windows.Forms.GroupBox groupBoxImgResult;
         private System.Windows.Forms.Label labelImgFailure;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }
 

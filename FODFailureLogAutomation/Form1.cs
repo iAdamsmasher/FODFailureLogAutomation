@@ -17,9 +17,17 @@ namespace FODFailureLogAutomation
             InitializeComponent();
         }
 
-        private void labelImgFailure_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
-
+            if (textBoxTrackId.TextLength != 10)
+            {
+                MessageBox.Show("TrackId Inválido", "TrackId - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBoxTrackId.Text = "";
+            }
+            else
+            {
+                textBoxTrackIdSearched.Text = textBoxTrackId.Text;
+            }
         }
     }
 }
