@@ -44,21 +44,7 @@ namespace FODFailureLogAutomation
                         string line;
                         while ((line = reader.ReadLine()) != null)
                         {
-                            if (line.Contains("[MMI_RESULT]") && line.Contains("failed"))
-                            {
-                                listBoxMeasCode.Items.Add(line);
-                            }
-                            if (line.Contains("TH:["))
-                            {
-                                line = line.Replace("[MMI_TH]", "");
-                                listBoxSpecsLimit.Items.Add(line);
-                            }
-                            if (line.Contains("[MMI_Calibraiton]"))
-                            {
-                                line = line.Replace("[MMI_Calibraiton]", "");
-                                if (!line.Contains("Calibration Test Result:fail"))
-                                    listBoxResultFailure.Items.Add(line);
-                            }
+                            linkLogWithBoxes(line);
                         }
                     }
                 }
@@ -68,13 +54,31 @@ namespace FODFailureLogAutomation
                 MessageBox.Show("TrackId Not Found!!!");
             }
         }
-
         private void listBoxMeasCode_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBoxImgFailure.Text = listBoxMeasCode.SelectedItem.ToString();
             string pictureName = string.Empty;
             // pictureName = listBoxMeasCode.SelectedItem.ToString();// TO DO
             // pictureBoxFailure.Image = Image.FromFile(@"img\" + pictureName + ".bmp");
+        }
+        private void linkLogWithBoxes(string line) {
+
+            if (line.Contains("[MMI_RESULT]") && line.Contains("failed"))
+            {
+                listBoxMeasCode.Items.Add(line);
+            }
+            if (line.Contains("TH:["))
+            {
+                line = line.Replace("[MMI_TH]", "");
+                listBoxSpecsLimit.Items.Add(line);
+            }
+            if (line.Contains("[MMI_Calibraiton]"))
+            {
+                line = line.Replace("[MMI_Calibraiton]", "");
+                if (!line.Contains("Calibration Test Result:fail"))
+                    listBoxResultFailure.Items.Add(line);
+            }
+
         }
     }
 }
