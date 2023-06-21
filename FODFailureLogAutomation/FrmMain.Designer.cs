@@ -42,8 +42,9 @@ namespace FODFailureLogAutomation
             this.listBoxMeasCode = new System.Windows.Forms.ListBox();
             this.labelImgFailure = new System.Windows.Forms.Label();
             this.groupBoxImgResult = new System.Windows.Forms.GroupBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxFailurePictures = new System.Windows.Forms.ComboBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -177,6 +178,15 @@ namespace FODFailureLogAutomation
             this.groupBoxImgResult.TabStop = false;
             this.groupBoxImgResult.Text = "IMAGE RESULT";
             // 
+            // comboBoxFailurePictures
+            // 
+            this.comboBoxFailurePictures.FormattingEnabled = true;
+            this.comboBoxFailurePictures.Location = new System.Drawing.Point(7, 44);
+            this.comboBoxFailurePictures.Name = "comboBoxFailurePictures";
+            this.comboBoxFailurePictures.Size = new System.Drawing.Size(459, 28);
+            this.comboBoxFailurePictures.TabIndex = 19;
+            this.comboBoxFailurePictures.SelectedIndexChanged += new System.EventHandler(this.comboBoxFailurePictures_SelectedIndexChanged);
+            // 
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,20 +198,23 @@ namespace FODFailureLogAutomation
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // comboBoxFailurePictures
+            // label1
             // 
-            this.comboBoxFailurePictures.FormattingEnabled = true;
-            this.comboBoxFailurePictures.Location = new System.Drawing.Point(7, 44);
-            this.comboBoxFailurePictures.Name = "comboBoxFailurePictures";
-            this.comboBoxFailurePictures.Size = new System.Drawing.Size(459, 28);
-            this.comboBoxFailurePictures.TabIndex = 19;
-            this.comboBoxFailurePictures.SelectedIndexChanged += new System.EventHandler(this.comboBoxFailurePictures_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(18, 782);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 15);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Developed by Matheus Paiva/A.Patricio";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1626, 806);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxImgResult);
@@ -239,6 +252,7 @@ namespace FODFailureLogAutomation
         private System.Windows.Forms.ListBox listBoxSpecsLimit;
         private System.Windows.Forms.ListBox listBoxResultFailure;
         private System.Windows.Forms.ComboBox comboBoxFailurePictures;
+        private System.Windows.Forms.Label label1;
     }
 }
 
