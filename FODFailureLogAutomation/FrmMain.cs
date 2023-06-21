@@ -28,6 +28,7 @@ namespace FODFailureLogAutomation
             else
             {
                 getFailureLog();
+                getPicture();
             }
         }
         private void getFailureLog()
@@ -56,12 +57,10 @@ namespace FODFailureLogAutomation
         }
         private void listBoxMeasCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBoxImgFailure.Text = listBoxMeasCode.SelectedItem.ToString();
-            string pictureName = string.Empty;
-            // pictureName = listBoxMeasCode.SelectedItem.ToString();// TO DO
-            // pictureBoxFailure.Image = Image.FromFile(@"img\" + pictureName + ".bmp");
+
         }
-        private void linkLogWithBoxes(string line) {
+        private void linkLogWithBoxes(string line)
+        {
 
             if (line.Contains("[MMI_RESULT]") && line.Contains("failed"))
             {
@@ -79,6 +78,34 @@ namespace FODFailureLogAutomation
                     listBoxResultFailure.Items.Add(line);
             }
 
+        }
+        private void getPicture()
+        {
+            string pathDefault = @"C:\prod\temp\" + textBoxTrackId.Text + @"\";
+            string temp = string.Empty;
+
+            try
+            {
+                foreach (string pictureName in Directory.GetFiles(pathDefault, "*.bmp*", System.IO.SearchOption.AllDirectories))
+                {
+                    comboBoxFailurePictures.Items.Add(pictureName);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("TrackId Not Found!!!");
+            }
+        }
+        private void comboBoxFailurePictures_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string pictureName = string.Empty;
+            pictureName = comboBoxFailurePictures.SelectedItem.ToString();
+            setPictureName(pictureName);
+
+        }
+        private void setPictureName(string pictureName)
+        {
+            pictureBoxFailure.Image = Image.FromFile(pictureName);
         }
     }
 }
