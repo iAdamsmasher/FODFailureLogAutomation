@@ -155,7 +155,6 @@ namespace FODFailureLogAutomation
             this.listBoxMeasCode.Name = "listBoxMeasCode";
             this.listBoxMeasCode.Size = new System.Drawing.Size(430, 684);
             this.listBoxMeasCode.TabIndex = 21;
-            this.listBoxMeasCode.SelectedIndexChanged += new System.EventHandler(this.listBoxMeasCode_SelectedIndexChanged);
             // 
             // labelImgFailure
             // 

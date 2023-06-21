@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -51,10 +48,6 @@ namespace FODFailureLogAutomation
             {
                 MessageBox.Show("TrackId Not Found!!!");
             }
-        }
-        private void listBoxMeasCode_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         private void linkLogWithBoxes(string line)
         {
