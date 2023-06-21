@@ -7,4 +7,3 @@ C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\bin\Debug
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\bin\Debug\FODFailureLogAutomation.pdb
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.exe
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.pdb
-C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.csproj.AssemblyReference.cache

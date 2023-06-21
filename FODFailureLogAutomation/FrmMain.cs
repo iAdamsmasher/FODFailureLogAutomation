@@ -27,7 +27,6 @@ namespace FODFailureLogAutomation
             }
             else
             {
-                textBoxTrackIdSearched.Text = textBoxTrackId.Text;
                 getFailureLog();
             }
         }
@@ -45,25 +44,37 @@ namespace FODFailureLogAutomation
                         string line;
                         while ((line = reader.ReadLine()) != null)
                         {
-                            if (line.Contains("fail"))
+                            if (line.Contains("[MMI_RESULT]") && line.Contains("failed"))
                             {
                                 listBoxMeasCode.Items.Add(line);
                             }
-                            if (line.Contains("[MMI_Calibraiton] Calibration Test Result:fail"))
+                            if (line.Contains("TH:["))
                             {
-
+                                line = line.Replace("[MMI_TH]", "");
+                                listBoxSpecsLimit.Items.Add(line);
+                            }
+                            if (line.Contains("[MMI_Calibraiton]"))
+                            {
+                                line = line.Replace("[MMI_Calibraiton]", "");
+                                if (!line.Contains("Calibration Test Result:fail"))
+                                    listBoxResultFailure.Items.Add(line);
                             }
                         }
-
                     }
                 }
             }
-
             catch
             {
                 MessageBox.Show("TrackId Not Found!!!");
             }
         }
 
+        private void listBoxMeasCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxImgFailure.Text = listBoxMeasCode.SelectedItem.ToString();
+            string pictureName = string.Empty;
+            // pictureName = listBoxMeasCode.SelectedItem.ToString();// TO DO
+            // pictureBoxFailure.Image = Image.FromFile(@"img\" + pictureName + ".bmp");
+        }
     }
 }
