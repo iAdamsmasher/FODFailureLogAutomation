@@ -66,7 +66,6 @@ namespace FODFailureLogAutomation
             this.textBoxTrackId.Name = "textBoxTrackId";
             this.textBoxTrackId.Size = new System.Drawing.Size(194, 26);
             this.textBoxTrackId.TabIndex = 1;
-            this.textBoxTrackId.Text = "NGKB150134";
             this.textBoxTrackId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelHighLimit
