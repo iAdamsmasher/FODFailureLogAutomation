@@ -45,6 +45,10 @@ namespace FODFailureLogAutomation
             this.comboBoxFailurePictures = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelDirectory = new System.Windows.Forms.Label();
+            this.textBoxDirectory = new System.Windows.Forms.TextBox();
+            this.buttonDirectory = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -55,7 +59,7 @@ namespace FODFailureLogAutomation
             // 
             this.labelTrackId.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.labelTrackId.AutoSize = true;
-            this.labelTrackId.Location = new System.Drawing.Point(204, 165);
+            this.labelTrackId.Location = new System.Drawing.Point(205, 124);
             this.labelTrackId.Name = "labelTrackId";
             this.labelTrackId.Size = new System.Drawing.Size(83, 20);
             this.labelTrackId.TabIndex = 0;
@@ -63,7 +67,7 @@ namespace FODFailureLogAutomation
             // 
             // textBoxTrackId
             // 
-            this.textBoxTrackId.Location = new System.Drawing.Point(147, 188);
+            this.textBoxTrackId.Location = new System.Drawing.Point(150, 147);
             this.textBoxTrackId.Name = "textBoxTrackId";
             this.textBoxTrackId.Size = new System.Drawing.Size(194, 26);
             this.textBoxTrackId.TabIndex = 1;
@@ -81,9 +85,9 @@ namespace FODFailureLogAutomation
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::FODFailureLogAutomation.Properties.Resources.LogoFlex;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(20, 17);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(21, 17);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(478, 132);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(216, 95);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
@@ -190,7 +194,7 @@ namespace FODFailureLogAutomation
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(147, 220);
+            this.buttonSearch.Location = new System.Drawing.Point(150, 179);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(194, 63);
             this.buttonSearch.TabIndex = 20;
@@ -209,11 +213,42 @@ namespace FODFailureLogAutomation
             this.label1.TabIndex = 21;
             this.label1.Text = "Developed by Matheus Paiva/A.Patricio";
             // 
+            // labelDirectory
+            // 
+            this.labelDirectory.AutoSize = true;
+            this.labelDirectory.Location = new System.Drawing.Point(17, 247);
+            this.labelDirectory.Name = "labelDirectory";
+            this.labelDirectory.Size = new System.Drawing.Size(99, 20);
+            this.labelDirectory.TabIndex = 22;
+            this.labelDirectory.Text = "LogDirectory";
+            // 
+            // textBoxDirectory
+            // 
+            this.textBoxDirectory.Location = new System.Drawing.Point(14, 270);
+            this.textBoxDirectory.Name = "textBoxDirectory";
+            this.textBoxDirectory.Size = new System.Drawing.Size(306, 26);
+            this.textBoxDirectory.TabIndex = 23;
+            this.textBoxDirectory.Text = "C:\\prod\\temp";
+            // 
+            // buttonDirectory
+            // 
+            this.buttonDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDirectory.Location = new System.Drawing.Point(335, 270);
+            this.buttonDirectory.Name = "buttonDirectory";
+            this.buttonDirectory.Size = new System.Drawing.Size(46, 35);
+            this.buttonDirectory.TabIndex = 24;
+            this.buttonDirectory.Text = "...";
+            this.buttonDirectory.UseVisualStyleBackColor = true;
+            this.buttonDirectory.Click += new System.EventHandler(this.buttonDirectory_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1626, 806);
+            this.Controls.Add(this.buttonDirectory);
+            this.Controls.Add(this.textBoxDirectory);
+            this.Controls.Add(this.labelDirectory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.groupBox2);
@@ -253,6 +288,10 @@ namespace FODFailureLogAutomation
         private System.Windows.Forms.ListBox listBoxResultFailure;
         private System.Windows.Forms.ComboBox comboBoxFailurePictures;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelDirectory;
+        private System.Windows.Forms.TextBox textBoxDirectory;
+        private System.Windows.Forms.Button buttonDirectory;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 

@@ -7,7 +7,6 @@ namespace FODFailureLogAutomation
 {
     public partial class FrmMain : Form
     {
-        string strPathDefault = @"C:\prod\temp\";
         string strLogFileName = "inline_log.txt";
         string strTrackIdErrorMsg = "TrackId Not Found!!!";
         string strTictureViewErrorMsg = "Error to load the Picture view!";
@@ -35,7 +34,7 @@ namespace FODFailureLogAutomation
         {
             try
             {
-                foreach (string file_name in Directory.GetFiles(strPathDefault + textBoxTrackId.Text + @"\", strLogFileName, SearchOption.AllDirectories))
+                foreach (string file_name in Directory.GetFiles(textBoxDirectory.Text + "\\" + textBoxTrackId.Text + @"\", strLogFileName, SearchOption.AllDirectories))
                 {
                     using (var reader = new StreamReader(file_name))
                     {
@@ -75,7 +74,7 @@ namespace FODFailureLogAutomation
         {
             try
             {
-                foreach (string pictureName in Directory.GetFiles(strPathDefault + textBoxTrackId.Text + @"\", strPicturePattern, SearchOption.AllDirectories))
+                foreach (string pictureName in Directory.GetFiles(textBoxDirectory.Text + "\\" + textBoxTrackId.Text + @"\", strPicturePattern, SearchOption.AllDirectories))
                 {
                     comboBoxFailurePictures.Items.Add(pictureName);
                 }
@@ -100,6 +99,14 @@ namespace FODFailureLogAutomation
             catch
             {
                 MessageBox.Show(strTictureViewErrorMsg);
+            }
+        }
+
+        private void buttonDirectory_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBoxDirectory.Text = folderBrowserDialog1.SelectedPath;
             }
         }
     }
