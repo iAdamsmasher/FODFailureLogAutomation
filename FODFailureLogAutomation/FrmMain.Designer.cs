@@ -59,7 +59,7 @@ namespace FODFailureLogAutomation
             // 
             this.labelTrackId.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.labelTrackId.AutoSize = true;
-            this.labelTrackId.Location = new System.Drawing.Point(205, 124);
+            this.labelTrackId.Location = new System.Drawing.Point(17, 179);
             this.labelTrackId.Name = "labelTrackId";
             this.labelTrackId.Size = new System.Drawing.Size(83, 20);
             this.labelTrackId.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace FODFailureLogAutomation
             // 
             // textBoxTrackId
             // 
-            this.textBoxTrackId.Location = new System.Drawing.Point(150, 147);
+            this.textBoxTrackId.Location = new System.Drawing.Point(21, 202);
             this.textBoxTrackId.Name = "textBoxTrackId";
             this.textBoxTrackId.Size = new System.Drawing.Size(194, 26);
             this.textBoxTrackId.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace FODFailureLogAutomation
             this.pictureBoxLogo.Image = global::FODFailureLogAutomation.Properties.Resources.LogoFlex;
             this.pictureBoxLogo.Location = new System.Drawing.Point(21, 17);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(216, 95);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(444, 147);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
@@ -136,15 +136,17 @@ namespace FODFailureLogAutomation
             // 
             // listBoxSpecsLimit
             // 
+            this.listBoxSpecsLimit.BackColor = System.Drawing.Color.AliceBlue;
             this.listBoxSpecsLimit.FormattingEnabled = true;
             this.listBoxSpecsLimit.ItemHeight = 20;
             this.listBoxSpecsLimit.Location = new System.Drawing.Point(346, 59);
             this.listBoxSpecsLimit.Name = "listBoxSpecsLimit";
-            this.listBoxSpecsLimit.Size = new System.Drawing.Size(313, 684);
+            this.listBoxSpecsLimit.Size = new System.Drawing.Size(346, 684);
             this.listBoxSpecsLimit.TabIndex = 23;
             // 
             // listBoxResultFailure
             // 
+            this.listBoxResultFailure.BackColor = System.Drawing.Color.AliceBlue;
             this.listBoxResultFailure.FormattingEnabled = true;
             this.listBoxResultFailure.ItemHeight = 20;
             this.listBoxResultFailure.Location = new System.Drawing.Point(17, 59);
@@ -154,11 +156,12 @@ namespace FODFailureLogAutomation
             // 
             // listBoxMeasCode
             // 
+            this.listBoxMeasCode.BackColor = System.Drawing.Color.AliceBlue;
             this.listBoxMeasCode.FormattingEnabled = true;
             this.listBoxMeasCode.ItemHeight = 20;
-            this.listBoxMeasCode.Location = new System.Drawing.Point(665, 59);
+            this.listBoxMeasCode.Location = new System.Drawing.Point(698, 59);
             this.listBoxMeasCode.Name = "listBoxMeasCode";
-            this.listBoxMeasCode.Size = new System.Drawing.Size(430, 684);
+            this.listBoxMeasCode.Size = new System.Drawing.Size(397, 684);
             this.listBoxMeasCode.TabIndex = 21;
             // 
             // labelImgFailure
@@ -193,13 +196,14 @@ namespace FODFailureLogAutomation
             // 
             // buttonSearch
             // 
+            this.buttonSearch.BackColor = System.Drawing.Color.Silver;
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(150, 179);
+            this.buttonSearch.Location = new System.Drawing.Point(250, 193);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(194, 63);
+            this.buttonSearch.Size = new System.Drawing.Size(204, 41);
             this.buttonSearch.TabIndex = 20;
             this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // label1
@@ -226,14 +230,14 @@ namespace FODFailureLogAutomation
             // 
             this.textBoxDirectory.Location = new System.Drawing.Point(14, 270);
             this.textBoxDirectory.Name = "textBoxDirectory";
-            this.textBoxDirectory.Size = new System.Drawing.Size(306, 26);
+            this.textBoxDirectory.Size = new System.Drawing.Size(414, 26);
             this.textBoxDirectory.TabIndex = 23;
             this.textBoxDirectory.Text = "C:\\prod\\temp";
             // 
             // buttonDirectory
             // 
             this.buttonDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDirectory.Location = new System.Drawing.Point(335, 270);
+            this.buttonDirectory.Location = new System.Drawing.Point(434, 270);
             this.buttonDirectory.Name = "buttonDirectory";
             this.buttonDirectory.Size = new System.Drawing.Size(46, 35);
             this.buttonDirectory.TabIndex = 24;
@@ -245,6 +249,7 @@ namespace FODFailureLogAutomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1626, 806);
             this.Controls.Add(this.buttonDirectory);
             this.Controls.Add(this.textBoxDirectory);
