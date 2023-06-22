@@ -50,6 +50,7 @@ namespace FODFailureLogAutomation
             catch
             {
                 MessageBox.Show(strTrackIdErrorMsg);
+                textBoxTrackId.Text = "";
             }
         }
         private void linkLogWithBoxes(string line)
