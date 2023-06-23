@@ -79,13 +79,13 @@ namespace FODFailureLogAutomation
         {
             try
             {
-                string modelCheck = "Godix";
+                string pictureModelCheck = "Godix";
                 foreach (string pictureName in Directory.GetFiles(textBoxDirectory.Text + "\\" + textBoxTrackId.Text + "\\", strPicturePattern, SearchOption.AllDirectories))
                 {
                     comboBoxFailurePictures.Items.Add(pictureName);
-                    modelCheck = "Egis";
+                    pictureModelCheck = "Egis";
                 }
-                labelProvider.Text = modelCheck;
+                labelProvider.Text = pictureModelCheck;
 
             }
             catch
