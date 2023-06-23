@@ -151,6 +151,7 @@ namespace FODFailureLogAutomation
             // 
             this.labelProviderName.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.labelProviderName.AutoSize = true;
+            this.labelProviderName.ForeColor = System.Drawing.Color.Navy;
             this.labelProviderName.Location = new System.Drawing.Point(119, 22);
             this.labelProviderName.Name = "labelProviderName";
             this.labelProviderName.Size = new System.Drawing.Size(116, 20);
