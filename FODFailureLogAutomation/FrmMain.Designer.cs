@@ -49,6 +49,8 @@ namespace FODFailureLogAutomation
             this.textBoxDirectory = new System.Windows.Forms.TextBox();
             this.buttonDirectory = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.labelProviderName = new System.Windows.Forms.Label();
+            this.labelProvider = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -76,7 +78,7 @@ namespace FODFailureLogAutomation
             // labelHighLimit
             // 
             this.labelHighLimit.AutoSize = true;
-            this.labelHighLimit.Location = new System.Drawing.Point(342, 36);
+            this.labelHighLimit.Location = new System.Drawing.Point(342, 76);
             this.labelHighLimit.Name = "labelHighLimit";
             this.labelHighLimit.Size = new System.Drawing.Size(189, 20);
             this.labelHighLimit.TabIndex = 3;
@@ -104,7 +106,7 @@ namespace FODFailureLogAutomation
             // labelFailureResult
             // 
             this.labelFailureResult.AutoSize = true;
-            this.labelFailureResult.Location = new System.Drawing.Point(670, 36);
+            this.labelFailureResult.Location = new System.Drawing.Point(694, 76);
             this.labelFailureResult.Name = "labelFailureResult";
             this.labelFailureResult.Size = new System.Drawing.Size(105, 20);
             this.labelFailureResult.TabIndex = 10;
@@ -113,7 +115,7 @@ namespace FODFailureLogAutomation
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(13, 36);
+            this.labelResult.Location = new System.Drawing.Point(13, 76);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(77, 20);
             this.labelResult.TabIndex = 13;
@@ -121,6 +123,8 @@ namespace FODFailureLogAutomation
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelProvider);
+            this.groupBox2.Controls.Add(this.labelProviderName);
             this.groupBox2.Controls.Add(this.listBoxSpecsLimit);
             this.groupBox2.Controls.Add(this.listBoxResultFailure);
             this.groupBox2.Controls.Add(this.listBoxMeasCode);
@@ -139,9 +143,9 @@ namespace FODFailureLogAutomation
             this.listBoxSpecsLimit.BackColor = System.Drawing.Color.AliceBlue;
             this.listBoxSpecsLimit.FormattingEnabled = true;
             this.listBoxSpecsLimit.ItemHeight = 20;
-            this.listBoxSpecsLimit.Location = new System.Drawing.Point(346, 59);
+            this.listBoxSpecsLimit.Location = new System.Drawing.Point(346, 99);
             this.listBoxSpecsLimit.Name = "listBoxSpecsLimit";
-            this.listBoxSpecsLimit.Size = new System.Drawing.Size(346, 684);
+            this.listBoxSpecsLimit.Size = new System.Drawing.Size(346, 644);
             this.listBoxSpecsLimit.TabIndex = 23;
             // 
             // listBoxResultFailure
@@ -149,9 +153,9 @@ namespace FODFailureLogAutomation
             this.listBoxResultFailure.BackColor = System.Drawing.Color.AliceBlue;
             this.listBoxResultFailure.FormattingEnabled = true;
             this.listBoxResultFailure.ItemHeight = 20;
-            this.listBoxResultFailure.Location = new System.Drawing.Point(17, 59);
+            this.listBoxResultFailure.Location = new System.Drawing.Point(17, 99);
             this.listBoxResultFailure.Name = "listBoxResultFailure";
-            this.listBoxResultFailure.Size = new System.Drawing.Size(323, 684);
+            this.listBoxResultFailure.Size = new System.Drawing.Size(323, 644);
             this.listBoxResultFailure.TabIndex = 22;
             // 
             // listBoxMeasCode
@@ -159,9 +163,9 @@ namespace FODFailureLogAutomation
             this.listBoxMeasCode.BackColor = System.Drawing.Color.AliceBlue;
             this.listBoxMeasCode.FormattingEnabled = true;
             this.listBoxMeasCode.ItemHeight = 20;
-            this.listBoxMeasCode.Location = new System.Drawing.Point(698, 59);
+            this.listBoxMeasCode.Location = new System.Drawing.Point(698, 99);
             this.listBoxMeasCode.Name = "listBoxMeasCode";
-            this.listBoxMeasCode.Size = new System.Drawing.Size(397, 684);
+            this.listBoxMeasCode.Size = new System.Drawing.Size(397, 644);
             this.listBoxMeasCode.TabIndex = 21;
             // 
             // labelImgFailure
@@ -245,6 +249,24 @@ namespace FODFailureLogAutomation
             this.buttonDirectory.UseVisualStyleBackColor = true;
             this.buttonDirectory.Click += new System.EventHandler(this.buttonDirectory_Click);
             // 
+            // labelProviderName
+            // 
+            this.labelProviderName.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.labelProviderName.AutoSize = true;
+            this.labelProviderName.Location = new System.Drawing.Point(119, 22);
+            this.labelProviderName.Name = "labelProviderName";
+            this.labelProviderName.Size = new System.Drawing.Size(139, 24);
+            this.labelProviderName.TabIndex = 24;
+            this.labelProviderName.Text = "Provider Name:";
+            // 
+            // labelProvider
+            // 
+            this.labelProvider.AutoSize = true;
+            this.labelProvider.Location = new System.Drawing.Point(247, 22);
+            this.labelProvider.Name = "labelProvider";
+            this.labelProvider.Size = new System.Drawing.Size(0, 24);
+            this.labelProvider.TabIndex = 25;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -297,6 +319,8 @@ namespace FODFailureLogAutomation
         private System.Windows.Forms.TextBox textBoxDirectory;
         private System.Windows.Forms.Button buttonDirectory;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label labelProviderName;
+        private System.Windows.Forms.Label labelProvider;
     }
 }
 

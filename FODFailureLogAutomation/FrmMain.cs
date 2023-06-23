@@ -19,6 +19,7 @@ namespace FODFailureLogAutomation
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            clearAllLog();
             if (textBoxTrackId.TextLength != 10)
             {
                 MessageBox.Show("TrackId Inválido", "TrackId - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -26,11 +27,13 @@ namespace FODFailureLogAutomation
             }
             else
             {
-                getFailureLog();
-                getPicture();
+                bool result = getFailureLog();
+
+                if (result)
+                    getPicture();
             }
         }
-        private void getFailureLog()
+        private bool getFailureLog()
         {
             try
             {
@@ -45,11 +48,13 @@ namespace FODFailureLogAutomation
                         }
                     }
                 }
+                return true;
             }
             catch
             {
                 MessageBox.Show(strTrackIdErrorMsg);
                 textBoxTrackId.Text = "";
+                return false;
             }
         }
         private void linkLogWithBoxes(string line)
@@ -74,10 +79,14 @@ namespace FODFailureLogAutomation
         {
             try
             {
+                string modelCheck = "Godix";
                 foreach (string pictureName in Directory.GetFiles(textBoxDirectory.Text + "\\" + textBoxTrackId.Text + "\\", strPicturePattern, SearchOption.AllDirectories))
                 {
                     comboBoxFailurePictures.Items.Add(pictureName);
+                    modelCheck = "Egis";
                 }
+                labelProvider.Text = modelCheck;
+
             }
             catch
             {
@@ -89,6 +98,15 @@ namespace FODFailureLogAutomation
             string pictureName = string.Empty;
             pictureName = comboBoxFailurePictures.SelectedItem.ToString();
             setPictureName(pictureName);
+        }
+        private void clearAllLog()
+        {
+            listBoxMeasCode.Items.Clear();
+            listBoxSpecsLimit.Items.Clear();
+            listBoxResultFailure.Items.Clear();
+            comboBoxFailurePictures.Items.Clear();
+
+
         }
         private void setPictureName(string pictureName)
         {
