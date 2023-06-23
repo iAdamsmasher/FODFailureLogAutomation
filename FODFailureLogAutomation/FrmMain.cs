@@ -97,6 +97,21 @@ namespace FODFailureLogAutomation
         {
             string pictureName = string.Empty;
             pictureName = comboBoxFailurePictures.SelectedItem.ToString();
+
+            if (pictureName.Contains("_mss_hbm_") || pictureName.Contains("_mss_wk") || pictureName.Contains("_sp_hbm_") || pictureName.Contains("_sp_wk") || pictureName.Contains("_testpattern_") || pictureName.Contains("_wk_bk"))
+                labelFingerName.Text = "FINGER 1";
+
+            else if (pictureName.Contains("_bp_map_") || pictureName.Contains("_fea_bk") || pictureName.Contains("_fea_mask_") || pictureName.Contains("_fea_v2_mask_") || pictureName.Contains("_snr_bk_") || pictureName.Contains("_sp_bk"))
+                labelFingerName.Text = "FINGER 2";
+
+            else if (pictureName.Contains("_snr_ct"))
+                labelFingerName.Text = "FINGER 3";
+           
+            else
+                labelFingerName.Text = "FINGER X";
+
+
+
             setPictureName(pictureName);
         }
         private void clearAllLog()
