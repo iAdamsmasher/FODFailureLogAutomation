@@ -1,4 +1,5 @@
 ﻿
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -58,6 +59,9 @@ namespace FODFailureLogAutomation
             frmMn.listBoxSpecsLimit.Items.Clear();
             frmMn.listBoxResultFailure.Items.Clear();
             frmMn.comboBoxFailurePictures.Items.Clear();
+            frmMn.comboBoxFailurePictures.Text = "";
+            frmMn.pictureBoxFailure.Image = Properties.Resources.Default;
+            frmMn.labelFingerName.Text = "";
         }
         public void getPictureLog()
         {
@@ -74,6 +78,7 @@ namespace FODFailureLogAutomation
             catch
             {
                 MessageBox.Show(strTrackIdErrorMsg);
+                frmMn.pictureBoxFailure.Image = Properties.Resources.Default;
             }
         }
 

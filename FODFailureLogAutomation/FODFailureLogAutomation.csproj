@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FLEX_logo.ico" />
+    <None Include="Resources\Default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

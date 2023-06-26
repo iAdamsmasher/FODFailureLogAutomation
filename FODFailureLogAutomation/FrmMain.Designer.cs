@@ -44,6 +44,7 @@ namespace FODFailureLogAutomation
             this.listBoxMeasCode = new System.Windows.Forms.ListBox();
             this.labelImgFailure = new System.Windows.Forms.Label();
             this.groupBoxImgResult = new System.Windows.Forms.GroupBox();
+            this.labelFingerName = new System.Windows.Forms.Label();
             this.comboBoxFailurePictures = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace FODFailureLogAutomation
             this.textBoxDirectory = new System.Windows.Forms.TextBox();
             this.buttonDirectory = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.labelFingerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -97,6 +97,7 @@ namespace FODFailureLogAutomation
             // 
             // pictureBoxFailure
             // 
+            this.pictureBoxFailure.Image = global::FODFailureLogAutomation.Properties.Resources.Default;
             this.pictureBoxFailure.Location = new System.Drawing.Point(6, 78);
             this.pictureBoxFailure.Name = "pictureBoxFailure";
             this.pictureBoxFailure.Size = new System.Drawing.Size(460, 391);
@@ -210,6 +211,16 @@ namespace FODFailureLogAutomation
             this.groupBoxImgResult.TabStop = false;
             this.groupBoxImgResult.Text = "IMAGE RESULT";
             // 
+            // labelFingerName
+            // 
+            this.labelFingerName.AutoSize = true;
+            this.labelFingerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFingerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelFingerName.Location = new System.Drawing.Point(189, 16);
+            this.labelFingerName.Name = "labelFingerName";
+            this.labelFingerName.Size = new System.Drawing.Size(0, 22);
+            this.labelFingerName.TabIndex = 21;
+            // 
             // comboBoxFailurePictures
             // 
             this.comboBoxFailurePictures.FormattingEnabled = true;
@@ -269,16 +280,6 @@ namespace FODFailureLogAutomation
             this.buttonDirectory.Text = "...";
             this.buttonDirectory.UseVisualStyleBackColor = true;
             this.buttonDirectory.Click += new System.EventHandler(this.buttonDirectory_Click);
-            // 
-            // labelFingerName
-            // 
-            this.labelFingerName.AutoSize = true;
-            this.labelFingerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFingerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelFingerName.Location = new System.Drawing.Point(189, 16);
-            this.labelFingerName.Name = "labelFingerName";
-            this.labelFingerName.Size = new System.Drawing.Size(0, 26);
-            this.labelFingerName.TabIndex = 21;
             // 
             // FrmMain
             // 
