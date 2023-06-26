@@ -6,7 +6,7 @@ namespace FODFailureLogAutomation
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -27,7 +27,7 @@ namespace FODFailureLogAutomation
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.labelTrackId = new System.Windows.Forms.Label();
             this.textBoxTrackId = new System.Windows.Forms.TextBox();
@@ -312,29 +312,29 @@ namespace FODFailureLogAutomation
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxTrackId;
-        private System.Windows.Forms.Label labelTrackId;
-        private System.Windows.Forms.Label labelHighLimit;
-        private System.Windows.Forms.PictureBox pictureBoxFailure;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelFailureResult;
-        private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBoxImgResult;
-        private System.Windows.Forms.Label labelImgFailure;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.ListBox listBoxMeasCode;
-        private System.Windows.Forms.ListBox listBoxSpecsLimit;
-        private System.Windows.Forms.ListBox listBoxResultFailure;
-        private System.Windows.Forms.ComboBox comboBoxFailurePictures;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelDirectory;
-        private System.Windows.Forms.TextBox textBoxDirectory;
-        private System.Windows.Forms.Button buttonDirectory;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Label labelProviderName;
-        private System.Windows.Forms.Label labelProvider;
-        private System.Windows.Forms.Label labelFingerName;
+        public System.Windows.Forms.TextBox textBoxTrackId;
+        public System.Windows.Forms.Label labelTrackId;
+        public System.Windows.Forms.Label labelHighLimit;
+        public System.Windows.Forms.PictureBox pictureBoxFailure;
+        public System.Windows.Forms.PictureBox pictureBoxLogo;
+        public System.Windows.Forms.Label labelFailureResult;
+        public System.Windows.Forms.Label labelResult;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.GroupBox groupBoxImgResult;
+        public System.Windows.Forms.Label labelImgFailure;
+        public System.Windows.Forms.Button buttonSearch;
+        public System.Windows.Forms.ListBox listBoxMeasCode;
+        public System.Windows.Forms.ListBox listBoxSpecsLimit;
+        public System.Windows.Forms.ListBox listBoxResultFailure;
+        public System.Windows.Forms.ComboBox comboBoxFailurePictures;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label labelDirectory;
+        public System.Windows.Forms.TextBox textBoxDirectory;
+        public System.Windows.Forms.Button buttonDirectory;
+        public System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        public System.Windows.Forms.Label labelProviderName;
+        public System.Windows.Forms.Label labelProvider;
+        public System.Windows.Forms.Label labelFingerName;
     }
 }
 
