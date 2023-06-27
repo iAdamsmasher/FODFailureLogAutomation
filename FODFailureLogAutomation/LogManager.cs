@@ -74,6 +74,9 @@ namespace FODFailureLogAutomation
                     pictureModelCheck = "Egis";
                 }
                 frmMn.labelProvider.Text = pictureModelCheck;
+                if (pictureModelCheck == "Godix")
+                    frmMn.tabControlFinger.SelectedIndex = 1;
+                Application.DoEvents();
             }
             catch
             {
