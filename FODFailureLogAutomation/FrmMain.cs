@@ -35,10 +35,11 @@ namespace FODFailureLogAutomation
             }
             else
             {
-                bool result = logManager.getFailureLog();
-
-                if (result)
-                    logManager.getPictureLog();
+                bool result = logManager.getPictureLog();
+                if (!result)
+                {
+                    MessageBox.Show("Error to search Log Failures");
+                }
             }
         }
         private void comboBoxFailurePictures_SelectedIndexChanged(object sender, EventArgs e)

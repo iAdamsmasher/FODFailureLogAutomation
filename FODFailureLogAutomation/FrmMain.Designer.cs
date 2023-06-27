@@ -37,10 +37,18 @@ namespace FODFailureLogAutomation
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControlFinger = new System.Windows.Forms.TabControl();
             this.TabEgis = new System.Windows.Forms.TabPage();
+            this.groupBoxEgis = new System.Windows.Forms.GroupBox();
             this.listBoxSpecsLimit = new System.Windows.Forms.ListBox();
-            this.listBoxResultFailure = new System.Windows.Forms.ListBox();
             this.listBoxMeasCode = new System.Windows.Forms.ListBox();
+            this.listBoxResultFailure = new System.Windows.Forms.ListBox();
             this.TabGodix = new System.Windows.Forms.TabPage();
+            this.groupBoxGodix = new System.Windows.Forms.GroupBox();
+            this.labelMeasResult = new System.Windows.Forms.Label();
+            this.labelMeasDescription = new System.Windows.Forms.Label();
+            this.labelMeasCode2 = new System.Windows.Forms.Label();
+            this.listBoxMeasResult = new System.Windows.Forms.ListBox();
+            this.listBoxMeasDescription = new System.Windows.Forms.ListBox();
+            this.listBoxMeasCode2 = new System.Windows.Forms.ListBox();
             this.labelProvider = new System.Windows.Forms.Label();
             this.labelProviderName = new System.Windows.Forms.Label();
             this.labelImgFailure = new System.Windows.Forms.Label();
@@ -55,18 +63,15 @@ namespace FODFailureLogAutomation
             this.buttonDirectory = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.groupBoxEgis = new System.Windows.Forms.GroupBox();
-            this.groupBoxGodix = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox2.SuspendLayout();
             this.tabControlFinger.SuspendLayout();
             this.TabEgis.SuspendLayout();
+            this.groupBoxEgis.SuspendLayout();
             this.TabGodix.SuspendLayout();
+            this.groupBoxGodix.SuspendLayout();
             this.groupBoxImgResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.groupBoxEgis.SuspendLayout();
-            this.groupBoxGodix.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTrackId
@@ -147,6 +152,21 @@ namespace FODFailureLogAutomation
             this.TabEgis.Text = "Egis";
             this.TabEgis.UseVisualStyleBackColor = true;
             // 
+            // groupBoxEgis
+            // 
+            this.groupBoxEgis.Controls.Add(this.labelResult);
+            this.groupBoxEgis.Controls.Add(this.labelFailureResult);
+            this.groupBoxEgis.Controls.Add(this.listBoxSpecsLimit);
+            this.groupBoxEgis.Controls.Add(this.listBoxMeasCode);
+            this.groupBoxEgis.Controls.Add(this.labelHighLimit);
+            this.groupBoxEgis.Controls.Add(this.listBoxResultFailure);
+            this.groupBoxEgis.Location = new System.Drawing.Point(21, 21);
+            this.groupBoxEgis.Name = "groupBoxEgis";
+            this.groupBoxEgis.Size = new System.Drawing.Size(1142, 731);
+            this.groupBoxEgis.TabIndex = 24;
+            this.groupBoxEgis.TabStop = false;
+            this.groupBoxEgis.Text = "Egis Details";
+            // 
             // listBoxSpecsLimit
             // 
             this.listBoxSpecsLimit.BackColor = System.Drawing.Color.AliceBlue;
@@ -157,16 +177,6 @@ namespace FODFailureLogAutomation
             this.listBoxSpecsLimit.Size = new System.Drawing.Size(346, 644);
             this.listBoxSpecsLimit.TabIndex = 23;
             // 
-            // listBoxResultFailure
-            // 
-            this.listBoxResultFailure.BackColor = System.Drawing.Color.AliceBlue;
-            this.listBoxResultFailure.FormattingEnabled = true;
-            this.listBoxResultFailure.ItemHeight = 20;
-            this.listBoxResultFailure.Location = new System.Drawing.Point(28, 55);
-            this.listBoxResultFailure.Name = "listBoxResultFailure";
-            this.listBoxResultFailure.Size = new System.Drawing.Size(323, 644);
-            this.listBoxResultFailure.TabIndex = 22;
-            // 
             // listBoxMeasCode
             // 
             this.listBoxMeasCode.BackColor = System.Drawing.Color.AliceBlue;
@@ -176,6 +186,16 @@ namespace FODFailureLogAutomation
             this.listBoxMeasCode.Name = "listBoxMeasCode";
             this.listBoxMeasCode.Size = new System.Drawing.Size(397, 644);
             this.listBoxMeasCode.TabIndex = 21;
+            // 
+            // listBoxResultFailure
+            // 
+            this.listBoxResultFailure.BackColor = System.Drawing.Color.AliceBlue;
+            this.listBoxResultFailure.FormattingEnabled = true;
+            this.listBoxResultFailure.ItemHeight = 20;
+            this.listBoxResultFailure.Location = new System.Drawing.Point(28, 55);
+            this.listBoxResultFailure.Name = "listBoxResultFailure";
+            this.listBoxResultFailure.Size = new System.Drawing.Size(323, 644);
+            this.listBoxResultFailure.TabIndex = 22;
             // 
             // TabGodix
             // 
@@ -188,12 +208,90 @@ namespace FODFailureLogAutomation
             this.TabGodix.Text = "Godix";
             this.TabGodix.UseVisualStyleBackColor = true;
             // 
+            // groupBoxGodix
+            // 
+            this.groupBoxGodix.Controls.Add(this.labelMeasResult);
+            this.groupBoxGodix.Controls.Add(this.labelMeasDescription);
+            this.groupBoxGodix.Controls.Add(this.labelMeasCode2);
+            this.groupBoxGodix.Controls.Add(this.listBoxMeasResult);
+            this.groupBoxGodix.Controls.Add(this.listBoxMeasDescription);
+            this.groupBoxGodix.Controls.Add(this.listBoxMeasCode2);
+            this.groupBoxGodix.Location = new System.Drawing.Point(17, 17);
+            this.groupBoxGodix.Name = "groupBoxGodix";
+            this.groupBoxGodix.Size = new System.Drawing.Size(1167, 755);
+            this.groupBoxGodix.TabIndex = 0;
+            this.groupBoxGodix.TabStop = false;
+            this.groupBoxGodix.Text = "Godix Details";
+            // 
+            // labelMeasResult
+            // 
+            this.labelMeasResult.AutoSize = true;
+            this.labelMeasResult.Location = new System.Drawing.Point(28, 36);
+            this.labelMeasResult.Name = "labelMeasResult";
+            this.labelMeasResult.Size = new System.Drawing.Size(173, 20);
+            this.labelMeasResult.TabIndex = 5;
+            this.labelMeasResult.Text = "MEAS CODE RESULT";
+            // 
+            // labelMeasDescription
+            // 
+            this.labelMeasDescription.AutoSize = true;
+            this.labelMeasDescription.Location = new System.Drawing.Point(28, 279);
+            this.labelMeasDescription.Name = "labelMeasDescription";
+            this.labelMeasDescription.Size = new System.Drawing.Size(218, 20);
+            this.labelMeasDescription.TabIndex = 4;
+            this.labelMeasDescription.Text = "MEAS CODE DESCRIPTION";
+            // 
+            // labelMeasCode2
+            // 
+            this.labelMeasCode2.AutoSize = true;
+            this.labelMeasCode2.Location = new System.Drawing.Point(28, 519);
+            this.labelMeasCode2.Name = "labelMeasCode2";
+            this.labelMeasCode2.Size = new System.Drawing.Size(105, 20);
+            this.labelMeasCode2.TabIndex = 3;
+            this.labelMeasCode2.Text = "MEAS CODE";
+            // 
+            // listBoxMeasResult
+            // 
+            this.listBoxMeasResult.BackColor = System.Drawing.Color.AliceBlue;
+            this.listBoxMeasResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxMeasResult.FormattingEnabled = true;
+            this.listBoxMeasResult.HorizontalScrollbar = true;
+            this.listBoxMeasResult.ItemHeight = 29;
+            this.listBoxMeasResult.Location = new System.Drawing.Point(32, 59);
+            this.listBoxMeasResult.Name = "listBoxMeasResult";
+            this.listBoxMeasResult.Size = new System.Drawing.Size(1115, 207);
+            this.listBoxMeasResult.TabIndex = 2;
+            // 
+            // listBoxMeasDescription
+            // 
+            this.listBoxMeasDescription.BackColor = System.Drawing.Color.AliceBlue;
+            this.listBoxMeasDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxMeasDescription.FormattingEnabled = true;
+            this.listBoxMeasDescription.ItemHeight = 29;
+            this.listBoxMeasDescription.Location = new System.Drawing.Point(32, 309);
+            this.listBoxMeasDescription.Name = "listBoxMeasDescription";
+            this.listBoxMeasDescription.Size = new System.Drawing.Size(1115, 207);
+            this.listBoxMeasDescription.TabIndex = 1;
+            // 
+            // listBoxMeasCode2
+            // 
+            this.listBoxMeasCode2.BackColor = System.Drawing.Color.AliceBlue;
+            this.listBoxMeasCode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxMeasCode2.FormattingEnabled = true;
+            this.listBoxMeasCode2.ItemHeight = 29;
+            this.listBoxMeasCode2.Location = new System.Drawing.Point(32, 542);
+            this.listBoxMeasCode2.Name = "listBoxMeasCode2";
+            this.listBoxMeasCode2.Size = new System.Drawing.Size(1115, 207);
+            this.listBoxMeasCode2.TabIndex = 0;
+            // 
             // labelProvider
             // 
             this.labelProvider.AutoSize = true;
-            this.labelProvider.Location = new System.Drawing.Point(136, 22);
+            this.labelProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProvider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelProvider.Location = new System.Drawing.Point(136, 14);
             this.labelProvider.Name = "labelProvider";
-            this.labelProvider.Size = new System.Drawing.Size(0, 20);
+            this.labelProvider.Size = new System.Drawing.Size(0, 26);
             this.labelProvider.TabIndex = 25;
             // 
             // labelProviderName
@@ -319,40 +417,6 @@ namespace FODFailureLogAutomation
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // groupBoxEgis
-            // 
-            this.groupBoxEgis.Controls.Add(this.labelResult);
-            this.groupBoxEgis.Controls.Add(this.labelFailureResult);
-            this.groupBoxEgis.Controls.Add(this.listBoxSpecsLimit);
-            this.groupBoxEgis.Controls.Add(this.listBoxMeasCode);
-            this.groupBoxEgis.Controls.Add(this.labelHighLimit);
-            this.groupBoxEgis.Controls.Add(this.listBoxResultFailure);
-            this.groupBoxEgis.Location = new System.Drawing.Point(21, 21);
-            this.groupBoxEgis.Name = "groupBoxEgis";
-            this.groupBoxEgis.Size = new System.Drawing.Size(1142, 731);
-            this.groupBoxEgis.TabIndex = 24;
-            this.groupBoxEgis.TabStop = false;
-            this.groupBoxEgis.Text = "groupBox1";
-            // 
-            // groupBoxGodix
-            // 
-            this.groupBoxGodix.Controls.Add(this.listBox1);
-            this.groupBoxGodix.Location = new System.Drawing.Point(17, 17);
-            this.groupBoxGodix.Name = "groupBoxGodix";
-            this.groupBoxGodix.Size = new System.Drawing.Size(1167, 753);
-            this.groupBoxGodix.TabIndex = 0;
-            this.groupBoxGodix.TabStop = false;
-            this.groupBoxGodix.Text = "groupBox3";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(928, 85);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 524);
-            this.listBox1.TabIndex = 0;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -377,14 +441,15 @@ namespace FODFailureLogAutomation
             this.groupBox2.PerformLayout();
             this.tabControlFinger.ResumeLayout(false);
             this.TabEgis.ResumeLayout(false);
+            this.groupBoxEgis.ResumeLayout(false);
+            this.groupBoxEgis.PerformLayout();
             this.TabGodix.ResumeLayout(false);
+            this.groupBoxGodix.ResumeLayout(false);
+            this.groupBoxGodix.PerformLayout();
             this.groupBoxImgResult.ResumeLayout(false);
             this.groupBoxImgResult.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.groupBoxEgis.ResumeLayout(false);
-            this.groupBoxEgis.PerformLayout();
-            this.groupBoxGodix.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,9 +482,14 @@ namespace FODFailureLogAutomation
         public System.Windows.Forms.TabControl tabControlFinger;
         public System.Windows.Forms.TabPage TabEgis;
         public System.Windows.Forms.TabPage TabGodix;
-        private System.Windows.Forms.GroupBox groupBoxEgis;
-        private System.Windows.Forms.GroupBox groupBoxGodix;
-        private System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.GroupBox groupBoxEgis;
+        public System.Windows.Forms.GroupBox groupBoxGodix;
+        public System.Windows.Forms.ListBox listBoxMeasCode2;
+        public System.Windows.Forms.Label labelMeasResult;
+        public System.Windows.Forms.Label labelMeasDescription;
+        public System.Windows.Forms.Label labelMeasCode2;
+        public System.Windows.Forms.ListBox listBoxMeasResult;
+        public System.Windows.Forms.ListBox listBoxMeasDescription;
     }
 }
 
