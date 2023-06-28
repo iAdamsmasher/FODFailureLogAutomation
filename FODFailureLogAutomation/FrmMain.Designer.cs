@@ -57,7 +57,7 @@ namespace FODFailureLogAutomation
             this.labelFingerName = new System.Windows.Forms.Label();
             this.comboBoxFailurePictures = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelDeveloperName = new System.Windows.Forms.Label();
             this.labelDirectory = new System.Windows.Forms.Label();
             this.textBoxDirectory = new System.Windows.Forms.TextBox();
             this.buttonDirectory = new System.Windows.Forms.Button();
@@ -368,16 +368,16 @@ namespace FODFailureLogAutomation
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // label1
+            // labelDeveloperName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(12, 882);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 15);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Developed by Matheus Paiva/A.Patricio";
+            this.labelDeveloperName.AutoSize = true;
+            this.labelDeveloperName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeveloperName.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelDeveloperName.Location = new System.Drawing.Point(12, 882);
+            this.labelDeveloperName.Name = "labelDeveloperName";
+            this.labelDeveloperName.Size = new System.Drawing.Size(385, 24);
+            this.labelDeveloperName.TabIndex = 21;
+            this.labelDeveloperName.Text = "Developed by Matheus Paiva/A.Patricio";
             // 
             // labelDirectory
             // 
@@ -394,7 +394,7 @@ namespace FODFailureLogAutomation
             this.textBoxDirectory.Name = "textBoxDirectory";
             this.textBoxDirectory.Size = new System.Drawing.Size(472, 26);
             this.textBoxDirectory.TabIndex = 23;
-            this.textBoxDirectory.Text = "C:\\prod\\temp";
+            this.textBoxDirectory.Text = "C:\\CAMERA_FAIL_DATA\\FOD";
             // 
             // buttonDirectory
             // 
@@ -409,8 +409,9 @@ namespace FODFailureLogAutomation
             // 
             // pictureBoxLogo
             // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.GhostWhite;
             this.pictureBoxLogo.Image = global::FODFailureLogAutomation.Properties.Resources.LogoFlex;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(20, 17);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(21, 17);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(580, 147);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -421,12 +422,12 @@ namespace FODFailureLogAutomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1891, 906);
             this.Controls.Add(this.buttonDirectory);
             this.Controls.Add(this.textBoxDirectory);
             this.Controls.Add(this.labelDirectory);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelDeveloperName);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxImgResult);
@@ -471,7 +472,7 @@ namespace FODFailureLogAutomation
         public System.Windows.Forms.ListBox listBoxSpecsLimit;
         public System.Windows.Forms.ListBox listBoxResultFailure;
         public System.Windows.Forms.ComboBox comboBoxFailurePictures;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label labelDeveloperName;
         public System.Windows.Forms.Label labelDirectory;
         public System.Windows.Forms.TextBox textBoxDirectory;
         public System.Windows.Forms.Button buttonDirectory;

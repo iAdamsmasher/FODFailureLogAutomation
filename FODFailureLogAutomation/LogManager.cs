@@ -18,14 +18,17 @@ namespace FODFailureLogAutomation
         {
             try
             {
-                foreach (string file_name in Directory.GetFiles(frmMn.textBoxDirectory.Text + "\\" + frmMn.textBoxTrackId.Text + "\\", strLogFileName, SearchOption.AllDirectories))
+                foreach (string folderName in Directory.GetDirectories(frmMn.textBoxDirectory.Text + "\\", frmMn.textBoxTrackId.Text, SearchOption.AllDirectories))
                 {
-                    using (var reader = new StreamReader(file_name))
+                    foreach (string file_name in Directory.GetFiles(folderName, strLogFileName, SearchOption.AllDirectories))
                     {
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
+                        using (var reader = new StreamReader(file_name))
                         {
-                            linkLogWithBoxesEgis(line);
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                linkLogWithBoxesEgis(line);
+                            }
                         }
                     }
                 }
@@ -42,15 +45,18 @@ namespace FODFailureLogAutomation
         {
             try
             {
-                foreach (string file_name in Directory.GetFiles(frmMn.textBoxDirectory.Text + "\\" + frmMn.textBoxTrackId.Text + "\\", strGodixPattern, SearchOption.AllDirectories))
+                foreach (string folderName in Directory.GetDirectories(frmMn.textBoxDirectory.Text + "\\", frmMn.textBoxTrackId.Text, SearchOption.AllDirectories))
                 {
-                    using (var reader = new StreamReader(file_name))
+                    foreach (string file_name in Directory.GetFiles(folderName, strGodixPattern, SearchOption.AllDirectories))
                     {
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
+                        using (var reader = new StreamReader(file_name))
                         {
-                            if (line.Contains("Fail,0x"))
-                                linkLogWithBoxesGodix(line);
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                if (line.Contains("Fail,0x"))
+                                    linkLogWithBoxesGodix(line);
+                            }
                         }
                     }
                 }
@@ -60,6 +66,44 @@ namespace FODFailureLogAutomation
             {
                 MessageBox.Show(strTrackIdErrorMsg);
                 frmMn.textBoxTrackId.Text = "";
+                return false;
+            }
+        }    
+        public bool getPictureLog()
+        {
+            try
+            {
+                string pictureModelCheck = "Godix";
+                foreach (string folderName in Directory.GetDirectories(frmMn.textBoxDirectory.Text + "\\", frmMn.textBoxTrackId.Text, SearchOption.AllDirectories))
+                {
+                    foreach (string pictureName in Directory.GetFiles(folderName, strPicturePattern, SearchOption.AllDirectories))
+                    {
+                        frmMn.comboBoxFailurePictures.Items.Add(pictureName);
+                        pictureModelCheck = "Egis";
+                    }
+                }
+                frmMn.labelProvider.Text = pictureModelCheck;
+
+                if (pictureModelCheck == "Egis")
+                {
+                    getFailureLogEgis();
+                    frmMn.tabControlFinger.SelectedIndex = 0;
+                }
+
+                if (pictureModelCheck == "Godix")
+                {
+                    frmMn.tabControlFinger.SelectedIndex = 1;
+                    Application.DoEvents();
+                    getFailureLogGodix();
+                }
+
+                return true;
+
+            }
+            catch
+            {
+                MessageBox.Show(strTrackIdErrorMsg);
+                frmMn.pictureBoxFailure.Image = Properties.Resources.Default;
                 return false;
             }
         }
@@ -100,7 +144,6 @@ namespace FODFailureLogAutomation
                     }
                 }
             }
-
         }
         public void clearAllLog()
         {
@@ -114,42 +157,6 @@ namespace FODFailureLogAutomation
             frmMn.listBoxMeasCode2.Items.Clear();
             frmMn.listBoxMeasDescription.Items.Clear();
             frmMn.listBoxMeasResult.Items.Clear();
-        }
-        public bool getPictureLog()
-        {
-            try
-            {
-                string pictureModelCheck = "Godix";
-                foreach (string pictureName in Directory.GetFiles(frmMn.textBoxDirectory.Text + "\\" + frmMn.textBoxTrackId.Text + "\\", strPicturePattern, SearchOption.AllDirectories))
-                {
-                    frmMn.comboBoxFailurePictures.Items.Add(pictureName);
-                    pictureModelCheck = "Egis";
-                }
-
-                frmMn.labelProvider.Text = pictureModelCheck;
-
-                if (pictureModelCheck == "Egis")
-                {
-                    getFailureLogEgis();
-                    frmMn.tabControlFinger.SelectedIndex = 0;
-                }
-
-                if (pictureModelCheck == "Godix")
-                {
-                    frmMn.tabControlFinger.SelectedIndex = 1;
-                    Application.DoEvents();
-                    getFailureLogGodix();
-                }
-
-                return true;
-
-            }
-            catch
-            {
-                MessageBox.Show(strTrackIdErrorMsg);
-                frmMn.pictureBoxFailure.Image = Properties.Resources.Default;
-                return false;
-            }
         }
     }
 }
