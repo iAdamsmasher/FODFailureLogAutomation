@@ -35,11 +35,15 @@ namespace FODFailureLogAutomation
             }
             else
             {
+                labelSearching.Text = "Searching......";
+                Application.DoEvents();
                 bool result = logManager.getPictureLog();
                 if (!result)
                 {
                     MessageBox.Show("Error to search Log Failures");
+                    labelSearching.Text = "Log NOT found!!!!";
                 }
+                labelSearching.Text = "Log found!!!!";
             }
         }
         private void comboBoxFailurePictures_SelectedIndexChanged(object sender, EventArgs e)
