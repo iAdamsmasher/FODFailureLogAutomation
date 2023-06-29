@@ -450,7 +450,7 @@ namespace FODFailureLogAutomation
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FOD FailureLog Automation";
+            this.Text = "FOD FailureLog Automation  V1.0";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControlFinger.ResumeLayout(false);
