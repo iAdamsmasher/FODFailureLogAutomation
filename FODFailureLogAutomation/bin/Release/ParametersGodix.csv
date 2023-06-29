@@ -1,82 +1,67 @@
-0x13;    GF_SZ_FT_ERROR_INIT_PARAM;Failed to initialize the mass production parameters;Software problem
-0x14;    GF_SZ_FT_ERROR_BAD_PIXEL_OVERPROOF;Abnormal bad points, over/below standard;"Dirty screen, dirty calibration head, light spot problem,
-Lens fit problem, PQ value is abnormal, Sensor problem"
-0x16;    GF_SZ_FT_ERROR_RAWDATA_INVALID;The RAWDATA Check fails. Procedure;The sequence of calibration head is wrong, or the collected data is abnormal
-0x18;    GF_SZ_FT_ERROR_COMM_FAIL;Sensor communication failure;SPI communication problem, firmware problem, Sensor problem
-0x19;    GF_SZ_FT_ERROR_READ_RAWDATA_TIMEOUT;Graph reading timeout;SPI communication problem, firmware problem, Sensor problem
-0x1D;    GF_SZ_FT_ERROR_SCREEN_STRUCT_INVALID;Screen structure ratio calculation failed;Screen structure is serious, screen problems
-0x1E;    GF_SZ_FT_ERROR_CHART_DIRECTION_INVALID;Chart direction error;Chart press the stripes in the wrong direction
-0x21;    GF_SZ_FT_ERROR_CALCULATE_KB_FAIL;KB calculation failure;The data collected by the calibration head is abnormal
-0x22;    GF_SZ_FT_ERROR_GET_TNOISE_FAIL;The Tnoise calculation failed;Too much data jitter, luminance changes, calibration head moves
-0x23;    GF_SZ_FT_ERROR_GET_SNOISE_FAIL;The Snoise calculation failed;"Uneven data, screen structure, spot problems,
-
-Dirty screen, dirty calibration head, bad points and bad lines"
-0x24;    GF_SZ_FT_ERROR_GET_PREPRESS_PARAM_FAIL;Preprocessing parameter calculation failed;The data collected by the calibration head is abnormal
-0x26;    GF_SZ_FT_ERROR_GET_RAWDATA_FAIL;Graph reading failure;SPI communication problem, firmware problem, Sensor problem
-0x27;    GF_SZ_FT_ERROR_SHARPNESS_ABNORMAL;Abnormal sharpness, over/under standard;Chart pressing problems, or fringe headlines are too big or too small
-0x29;    GF_SZ_FT_ERROR_SSNR_TEST_FAIL;The SSS is abnormal, exceeding the standard;"Chart pressing problem, dirty screen, dirty calibration head,
-
-Light spot problem, Lens fitting problem, PQ value is wrong"
-0x2D;    GF_SZ_FT_ERROR_KB_CALIBRATION_FAIL;KB calibration failure;The data collected by the calibration head is abnormal
-0x2E;    GF_SZ_FT_ERROR_READ_FLASH_FAIL;FLASH reading failure;SPI communication problem, firmware problem, Sensor problem
-0x2F;    GF_SZ_FT_ERROR_WRITE_FLASH_FAIL;Write FLASH failed;SPI communication problem, firmware problem, Sensor problem
-0x30;    GF_SZ_FT_ERROR_CHECK_MT_FAIL;MT information Check is incorrect;"MT information missing, MT information wrong, SPI communication problem,
-
-The firmware is faulty. The Sensor is faulty"
-0x31;    GF_SZ_FT_ERROR_WRITE_RESUTL_TO_FLASH_FAIL;Failed to write to FLASH or Save. Procedure;SPI communication problem, firmware problem, Sensor problem
-0x33;    GF_SZ_FT_ERROR_CHIP_ID_CHECK_FAIL;Incorrect CHIP ID;SPI communication problem, firmware problem, Sensor problem
-0x34;    GF_SZ_FT_ERROR_FOV_TEST_FAIL;The FOV area is abnormal, exceeding or failing the standard;"Dirty screen, dirty calibration head, Chart stripes broken,
-
-Incomplete press, insufficient pressure, Lens fitting problem"
-0x35;    GF_SZ_FT_ERROR_SCALE_ABNORMAL;Abnormal magnification, over/below standard;"Dirty screen, dirty calibration head, Chart stripes broken,
-
-Incomplete press, insufficient pressure, Lens fitting problem"
-0x36;    GF_SZ_FT_ERROR_ILLUMINANCE_ABNORMAL;Abnormal relative illumination, over/below standard;The screen brightness is not enough, the screen brightness is uneven, the screen is dirty, the press is not complete, the press is not strong enough, the Lens fitting problem
-0x37;    GF_SZ_FT_ERROR_TOUCH_DIFF_ABNORMAL;TOUCH DIFF is abnormal, exceeding or below the standard;The sequence of calibration head is wrong, or the collected data is abnormal
-0x38;    GF_SZ_FT_ERROR_CONTRAST_ABNORMAL;CONTRAST is abnormal, the system is above/below the standard;Chart dirty, Chart pressing problem
-0x3A;    GF_SZ_FT_ERROR_SELF_EXPOSURE_ABNORMAL;Automatic exposure abnormal, over/under standard;"HBM mode error, screen brightness is not enough, spot brightness is wrong; Spot type error, spot location error, spot size error; Module itself is not sensitive, the lens is blocked, etc"
-0x3C;    GF_SZ_FT_ERROR_LEAK_LIGHT_ABNOEMAL;Abnormal light leakage ratio, over/under standard;Screen problem, or test head pressing problem
-0x70;    GF_SZ_FT_ERROR_BAD_PIXEL_PARAM_INIT_FAIL;Failed to initialize the bad point parameter;Software problem
-0x71;    GF_SZ_FT_ERROR_CHECK_BAD_PIXEL_FAIL;Bad spot detection failed;"Same as ""bad point anomaly"""
-0x73;    GF_SZ_FT_ERROR_GET_FOV_FAIL;Failed to obtain FOV;"Same as ""FOV region exception"""
-0x74;    GF_SZ_FT_ERROR_SCREEN_STRUCT_PARAM_INIT_FAIL;Failed to initialize the screen structure parameter;Software problem
-0x75;    GF_SZ_FT_ERROR_GET_SCREEN_STRUCT_RATIO_FAIL;Failed to obtain screen structure ratio;"Same as ""screen structure ratio exception"""
-0x76;    GF_SZ_FT_ERROR_CALCULATE_KB_PARAM_INIT_FAIL;KB Calculation parameters failed to be initialized;Software problem
-0x77;    GF_SZ_FT_ERROR_GET_SCALE_RATIO_FAIL;Amplification failed to be obtained;"Same as ""magnification anomaly"""
-0x78;    GF_SZ_FT_ERROR_QUALITY_CONTROL_PARAM_INIT_FAIL;Failed to initialize quality control parameters;Software problem
-0x79;    GF_SZ_FT_ERROR_SCALE_RATIO_PARAM_INIT_FAIL;Failed to initialize the magnification parameter;Software problem
-0x7A;    GF_SZ_FT_ERROR_TNOISE_PARAM_INIT_FAIL;Failed to initialize the TNOISE parameter;Software problem
-0x7B;    GF_SZ_FT_ERROR_TNOISE_OVERPROOF;The TNOISE parameter is abnormal, exceeding or below the standard;Too much data jitter, luminance changes, calibration head moves
-0x7C;    GF_SZ_FT_ERROR_SNOISE_PARAM_INIT_FAIL;Description Failed to initialize the SNOISE parameter;Software problem
-0x7D;    GF_SZ_FT_ERROR_SNOISE_OVERPROOF;The SNOISE parameter is abnormal, exceeding or below the standard;"Data unevenness, screen structure interference, spot problems,
-
-Dirty screen, dirty calibration head, bad points and bad lines"
-0x7E;    GF_SZ_FT_ERROR_TOUCH_DIFF_PARAM_INIT_FAIL;Failed to initialize the TOUCH DIFF parameter;Software problem
-0x7F;    GF_SZ_FT_ERROR_GET_TOUCH_DIFF_FAIL;Failed to obtain TOUCH DIFF. Procedure;"Same as ""TOUCH DIFF exception"""
-0x80;    GF_SZ_FT_ERROR_LEAK_LIGHT_PARAM_INIT_FAIL;Failed to initialize the LEAK LIGHT parameter;Software problem
-0x81;    GF_SZ_FT_ERROR_GET_LEAK_LIGHT_FAIL;Failed to obtain the LEAK LIGHT;"Same as ""leakage ratio anomaly"""
-0x82;    GF_SZ_FT_ERROR_ILLUMINANCE_PARAM_INIT_FAIL;Illuminance parameter initialization failure;Software problem
-0x83;    GF_SZ_FT_ERROR_GET_ILLUMINANCE_FAIL;The ILLUMINANCE acquisition failed;Relative illuminance anomaly
-0x84;    GF_SZ_FT_ERROR_SSNR_PARAM_INIT_FAIL;Description Failed to initialize the SSNR parameter;Software problem
-0x85;    GF_SZ_FT_ERROR_GET_SSNR_PTOP_FAIL;Failed to obtain the SSNR. Procedure;"Same as ""SSNR exception"""
-0x86;    GF_SZ_FT_ERROR_CHART_DIRECTION_PARAM_INIT_FAIL;The CHART DIRECTION parameter failed to initialize;Software problem
-0x87;    GF_SZ_FT_ERROR_SHARPNESS_PARAM_INIT_FAIL;Failed to initialize the SHARPNESS parameter;Software problem
-0x88;    GF_SZ_FT_ERROR_GET_SHARPNESS_FAIL;Failed to obtain SHARPNESS;"Same as ""abnormal sharpness"""
-0x8B;    GF_SZ_FT_ERROR_SET_HBM_MODE_FAIL;Failed to set the HBM mode;Software problem, permission problem
-0x8C;    GF_SZ_FT_ERROR_CLOSE_HBM_MODE_FAIL;Failed to disable the HBM mode;Software problem, permission problem
-0x8D;    GF_SZ_FT_ERROR_SET_HIGH_BRIGHTNESS_FAIL;Failed to set the highlighting mode;Software problem, permission problem
-0x8E;    GF_SZ_FT_ERROR_SET_LOW_BRIGHTNESS_FAIL;Failed to set the low light mode;Software problem, permission problem
-0x90;    GF_SZ_FT_ERROR_CENTER_OFFSET_INIT_FAIL;Failed to initialize the spot migration parameter;Software problem
-0x91;    GF_SZ_FT_ERROR_CHECK_CENTER_OFFSET_FAIL;The spot offset Check failed. Procedure;"The spot is not aligned, the Lens is offset, and the calibration head is dirty
-
-Dirty screen, uneven screen brightness, Sensor problem"
-0x92;    GF_SZ_FT_ERROR_CHECK_LENS_MODULE_TILT_FAIL;Lens tilt Check failed;The spot is not aligned, the module or lens assembly is tilted, and the calibration head is dirty
-0x93;    GF_SZ_FT_ERROR_LENS_MODULE_TILT_OVERPROOF;Lens tilt test exceeds standard;The spot is not aligned, the module or lens assembly is tilted, and the calibration head is dirty
-0x94;    GF_SZ_FT_ERROR_MASK_CHECK_FAIL;Failed to obtain the CF point value;Software error
-0x95;    GF_SZ_FT_ERROR_RAW_DATA;Highlighting flesh data is too small;The highlight is abnormal
-0x96;    GF_SZ_FT_ERROR_MOIRE_PARAM_INIT_FAIL;Failed to initialize the moire detection module;Software error
-0x97;    GF_SZ_FT_ERROR_CHECK_MOIRE_FAIL;The moire detection function failed;Data exception, software error
-0x99;    GF_SZ_FT_ERROR_CHECK_FLESH_INIT_FAIL;The flesh head data detection module failed to initialize;Software error
-0x9A;    GF_SZ_FT_ERROR_CHECK_FLESH_CHECK_FAIL;Flesh-colored head data detection failed;Data exception, software error
-0x9E;    GF_SZ_FT_ERROR_CALC_SHELTER_FAIL;Detection occlusion failure;Data exception, software error
-0xFF;    GF_SZ_FT_ERROR_APPLICATION_EXCEPTION;Application exception;Software problem
+0x13;    GF_SZ_FT_ERROR_INIT_PARAM; Falhou para iniciar os parametros do lote de producao;Problema de software
+0x14;    GF_SZ_FT_ERROR_BAD_PIXEL_OVERPROOF; Anormalidade em pontos ruins, acima/abaixo do padrao;Tela suja, superficie do finger de calibracao suja, problema de ponto de luz, Problema de ajuste da lente, valor PQ e anormal, problema do sensor
+0x16;    GF_SZ_FT_ERROR_RAWDATA_INVALID; O checamento de dados nao tratados falhou;A sequencia da cabeca de calibracao esta errada, ou os dados coletados sao anormais
+0x18;    GF_SZ_FT_ERROR_COMM_FAIL; Falha de comunicacao com o Sensor;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x19;    GF_SZ_FT_ERROR_READ_RAWDATA_TIMEOUT;Tempo limite de leitura do grafico;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x1D;    GF_SZ_FT_ERROR_SCREEN_STRUCT_INVALID;Falha no calculo da proporcao da estrutura da tela;Estrutura da tela e seria, problemas de tela
+0x1E;    GF_SZ_FT_ERROR_CHART_DIRECTION_INVALID;Erro de direcao do grafico;Grafico pressione as listras na direcao errada
+0x21;    GF_SZ_FT_ERROR_CALCULATE_KB_FAIL;Falha no calculo do KB;Os dados coletados pelo cabecote de calibracao sao anormais
+0x22;    GF_SZ_FT_ERROR_GET_TNOISE_FAIL;O calculo Tnoise falhou;Muita oscilacao de dados, mudancas de luminancia, movimentos da cabeca de calibracao
+0x23;    GF_SZ_FT_ERROR_GET_SNOISE_FAIL;O calculo do Snoise falhou;Dados irregulares, estrutura da tela, problemas pontuais, Tela suja, superficie do finger de calibracao suja, pontos ruins e linhas ruins
+0x24;    GF_SZ_FT_ERROR_GET_PREPRESS_PARAM_FAIL;Falha no calculo do parametro de pra-processamento;Os dados coletados pelo cabecote de calibracao sao anormais
+0x26;    GF_SZ_FT_ERROR_GET_RAWDATA_FAIL;Falha na leitura do grafico;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x27;    GF_SZ_FT_ERROR_SHARPNESS_ABNORMAL;Nitidez anormal, sobre/abaixo do padrao;Problemas de pressao de graficos ou manchetes marginais sao muito grandes ou muito pequenos
+0x29;    GF_SZ_FT_ERROR_SSNR_TEST_FAIL;O SSS e anormal, excedendo o padrao;Problema de prensagem de grafico, tela suja, superficie do finger de calibracao suja, Problema de ponto de luz, problema de ajuste da lente, valor PQ esta errado
+0x2D;    GF_SZ_FT_ERROR_KB_CALIBRATION_FAIL;Falha na calibracao da KB;Os dados coletados pelo cabecote de calibracao sao anormais
+0x2E;    GF_SZ_FT_ERROR_READ_FLASH_FAIL;Falha de leitura FLASH;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x2F;    GF_SZ_FT_ERROR_WRITE_FLASH_FAIL;Falha ao gravar o FLASH;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x30;    GF_SZ_FT_ERROR_CHECK_MT_FAIL;A verificacao de informacoes MT esta incorreta;MT informacoes faltando, MT informacoes erradas, SPI problema de comunicacao, O firmware esta com defeito. O sensor esta com defeito
+0x31;    GF_SZ_FT_ERROR_WRITE_RESUTL_TO_FLASH_FAIL;Falha ao gravar em FLASH ou Salvar. Procedimento;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x33;    GF_SZ_FT_ERROR_CHIP_ID_CHECK_FAIL; do CHIP incorreto;Problema de comunicacao SPI, problema de firmware, problema de sensor
+0x34;    GF_SZ_FT_ERROR_FOV_TEST_FAIL;A area de FOV e anormal, excedendo ou falhando o padrao;Tela suja, superficie do finger de calibracao suja, listras de grafico quebradas, Prensa incompleta, pressao insuficiente, problema de encaixe da lente
+0x35;    GF_SZ_FT_ERROR_SCALE_ABNORMAL;Ampliacao anormal, acima/abaixo do padrao;Tela suja, superficie do finger de calibracao suja, listras de grafico quebradas, Prensa incompleta, pressao insuficiente, problema de encaixe da lente
+0x36;    GF_SZ_FT_ERROR_ILLUMINANCE_ABNORMAL;Iluminacao relativa anormal, acima ou abaixo do padrao;O brilho da tela nao e suficiente, o brilho da tela e irregular, a tela esta suja, a prensa nao esta completa, a imprensa nao e forte o suficiente,  problema de ajuste da lente
+0x37;    GF_SZ_FT_ERROR_TOUCH_DIFF_ABNORMAL;TOUCH DIFF e anormal, excedendo ou abaixo do padrao;A sequencia da superficie do finger de calibracao esta errada, ou os dados coletados sao anormais
+0x38;    GF_SZ_FT_ERROR_CONTRAST_ABNORMAL;CONTRASTE e anormal, o sistema esta acima/abaixo do padrao;Grafico sujo, Problema de pressao do grafico
+0x3A;    GF_SZ_FT_ERROR_SELF_EXPOSURE_ABNORMAL;Exposicao automatica anormal, sobre/abaixo do padrao;Erro de modo HBM, o brilho da tela nao e suficiente, o brilho do ponto esta errado Erro de tipo de ponto, erro de localizacao de ponto, erro de tamanho de ponto O modulo em si nao e sensivel, a lente esta bloqueada, etc
+0x3C;    GF_SZ_FT_ERROR_LEAK_LIGHT_ABNOEMAL;Taxa de fuga de luz anormal, sobre/abaixo do padrao;Problema de tela ou problema de pressao da superficie do finger de teste
+0x70;    GF_SZ_FT_ERROR_BAD_PIXEL_PARAM_INIT_FAIL;Falha ao inicializar o parametro de ponto incorreto;Problema de software
+0x71;    GF_SZ_FT_ERROR_CHECK_BAD_PIXEL_FAIL;Falha na deteccao de pontos incorretos;O mesmo que anomalia de ponto ruim
+0x73;    GF_SZ_FT_ERROR_GET_FOV_FAIL;Falha ao obter FOV;O mesmo que excecao de regiao FOV
+0x74;    GF_SZ_FT_ERROR_SCREEN_STRUCT_PARAM_INIT_FAIL;Falha ao inicializar o parametro de estrutura da tela;Problema de software
+0x75;    GF_SZ_FT_ERROR_GET_SCREEN_STRUCT_RATIO_FAIL;Falha ao obter a proporcao de estrutura da tela;O mesmo que excecao de proporcao de estrutura de tela
+0x76;    GF_SZ_FT_ERROR_CALCULATE_KB_PARAM_INIT_FAIL;Falha ao inicializar parametros de calculo da Base de Dados de Conhecimento;Problema de software
+0x77;    GF_SZ_FT_ERROR_GET_SCALE_RATIO_FAIL;Nao foi obtida amplificacao;O mesmo que anomalia de ampliacao
+0x78;    GF_SZ_FT_ERROR_QUALITY_CONTROL_PARAM_INIT_FAIL;Falha ao inicializar parametros de controle de qualidade;Problema de software
+0x79;    GF_SZ_FT_ERROR_SCALE_RATIO_PARAM_INIT_FAIL;Falha ao inicializar o parametro de ampliacao;Problema de software
+0x7A;    GF_SZ_FT_ERROR_TNOISE_PARAM_INIT_FAIL;Falha ao inicializar o parametro TNOISE;Problema de software
+0x7B;    GF_SZ_FT_ERROR_TNOISE_OVERPROOF;O parametro TNOISE e anormal, excedendo ou abaixo do padrao;Muita oscilacao de dados, mudancas de luminancia, movimentos da superficie do finger de calibracao
+0x7C;    GF_SZ_FT_ERROR_SNOISE_PARAM_INIT_FAIL;Descricao: Falha ao inicializar o parametro SNOISE;Problema de software
+0x7D;    GF_SZ_FT_ERROR_SNOISE_OVERPROOF;O parametro SNOISE e anormal, excedendo ou abaixo do padrao;Desnivel de dados, interferencia na estrutura da tela, problemas pontuais, Tela suja, superficie do finger de calibracao suja, pontos ruins e linhas ruins
+0x7E;    GF_SZ_FT_ERROR_TOUCH_DIFF_PARAM_INIT_FAIL;Falha ao inicializar o parametro TOUCH DIFF;Problema de software
+0x7F;    GF_SZ_FT_ERROR_GET_TOUCH_DIFF_FAIL;Falha ao obter o procedimento TOUCH DIFF.;O mesmo que excecao TOUCH DIFF
+0x80;    GF_SZ_FT_ERROR_LEAK_LIGHT_PARAM_INIT_FAIL;Falha ao inicializar o parametro LEAK LIGHT;Problema de software
+0x81;    GF_SZ_FT_ERROR_GET_LEAK_LIGHT_FAIL;Falha ao obter o LEAK LIGHT;O mesmo que anomalia de taxa de vazamento
+0x82;    GF_SZ_FT_ERROR_ILLUMINANCE_PARAM_INIT_FAIL;Falha na inicializacao do parametro de iluminancia;Problema de software
+0x83;    GF_SZ_FT_ERROR_GET_ILLUMINANCE_FAIL;A aquisicao da ILLUMINANCE falhou;Anomalia de iluminancia relativa
+0x84;    GF_SZ_FT_ERROR_SSNR_PARAM_INIT_FAIL;Descricao: Falha ao inicializar o parametro SSNR;Problema de software
+0x85;    GF_SZ_FT_ERROR_GET_SSNR_PTOP_FAIL;Falha ao obter o SSNR. Procedimento;O mesmo que excecao SSNR
+0x86;    GF_SZ_FT_ERROR_CHART_DIRECTION_PARAM_INIT_FAIL;Falha ao inicializar o parametro CHART DIRECTION;Problema de software
+0x87;    GF_SZ_FT_ERROR_SHARPNESS_PARAM_INIT_FAIL;Falha ao inicializar o parametro SHARPNESS;Problema de software
+0x88;    GF_SZ_FT_ERROR_GET_SHARPNESS_FAIL;Falha ao obter NITIDEZ;O mesmo que nitidez anormal
+0x8B;    GF_SZ_FT_ERROR_SET_HBM_MODE_FAIL;Falha ao definir o modo HBM;Problema de software, problema de permissao
+0x8C;    GF_SZ_FT_ERROR_CLOSE_HBM_MODE_FAIL;Falha ao desativar o modo HBM;Problema de software, problema de permissao
+0x8D;    GF_SZ_FT_ERROR_SET_HIGH_BRIGHTNESS_FAIL;Falha ao definir o modo de realce;Problema de software, problema de permissao
+0x8E;    GF_SZ_FT_ERROR_SET_LOW_BRIGHTNESS_FAIL;Falha ao definir o modo de pouca luz;Problema de software, problema de permissao
+0x90;    GF_SZ_FT_ERROR_CENTER_OFFSET_INIT_FAIL;Falha ao inicializar o parametro de migracao spot;Problema de software
+0x91;    GF_SZ_FT_ERROR_CHECK_CENTER_OFFSET_FAIL;A verificacao de deslocamento pontual falhou. Procedimento;O ponto nao esta alinhado, a lente esta deslocada e a superficie do finger de calibracao esta suja, Tela suja, brilho irregular da tela, problema do sensor
+0x92;    GF_SZ_FT_ERROR_CHECK_LENS_MODULE_TILT_FAIL;Falha na verificacao de inclinacao da lente;O ponto nao esta alinhado, o conjunto do modulo ou da lente e inclinado e a cabeca de calibracao esta suja
+0x93;    GF_SZ_FT_ERROR_LENS_MODULE_TILT_OVERPROOF;O teste de inclinacao da lente excede o padrao;O ponto nao esta alinhado, o conjunto do modulo ou da lente e inclinado e a cabeca de calibracao esta suja
+0x94;    GF_SZ_FT_ERROR_MASK_CHECK_FAIL;Falha ao obter o valor do ponto CF;Erro de software
+0x95;    GF_SZ_FT_ERROR_RAW_DATA;Destacar dados de iluminacao e muito pequeno;O destaque e anormal
+0x96;    GF_SZ_FT_ERROR_MOIRE_PARAM_INIT_FAIL;Falha ao inicializar o modulo de deteccao de Moire;Erro de software
+0x97;    GF_SZ_FT_ERROR_CHECK_MOIRE_FAIL;A funcao de deteccao Moire falhou;Excecao de dados, erro de software
+0x99;    GF_SZ_FT_ERROR_CHECK_FLESH_INIT_FAIL;Falha ao inicializar o modulo de deteccao de dados do cabecote de iluminacao;Erro de software
+0x9A;    GF_SZ_FT_ERROR_CHECK_FLESH_CHECK_FAIL;Falha na deteccao de dados de cabecote cor de iluminacao;Excecao de dados, erro de software
+0x9E;    GF_SZ_FT_ERROR_CALC_SHELTER_FAIL;Falha na deteccao de oclusao;Excecao de dados, erro de software
+0xFF;    GF_SZ_FT_ERROR_APPLICATION_EXCEPTION;Excecao de aplicativo;Problema de software
