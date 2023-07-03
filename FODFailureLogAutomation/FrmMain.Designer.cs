@@ -147,7 +147,7 @@ namespace FODFailureLogAutomation
             this.TabEgis.Controls.Add(this.groupBoxEgis);
             this.TabEgis.Location = new System.Drawing.Point(4, 29);
             this.TabEgis.Name = "TabEgis";
-            this.TabEgis.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabEgis.Padding = new System.Windows.Forms.Padding(3);
             this.TabEgis.Size = new System.Drawing.Size(1202, 789);
             this.TabEgis.TabIndex = 0;
             this.TabEgis.Text = "Egis";
@@ -203,8 +203,8 @@ namespace FODFailureLogAutomation
             this.TabGodix.Controls.Add(this.groupBoxGodix);
             this.TabGodix.Location = new System.Drawing.Point(4, 29);
             this.TabGodix.Name = "TabGodix";
-            this.TabGodix.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.TabGodix.Size = new System.Drawing.Size(1202, 789);
+            this.TabGodix.Padding = new System.Windows.Forms.Padding(3);
+            this.TabGodix.Size = new System.Drawing.Size(1202, 791);
             this.TabGodix.TabIndex = 1;
             this.TabGodix.Text = "Godix";
             this.TabGodix.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@ namespace FODFailureLogAutomation
             this.labelMeasResult.AutoSize = true;
             this.labelMeasResult.Location = new System.Drawing.Point(28, 35);
             this.labelMeasResult.Name = "labelMeasResult";
-            this.labelMeasResult.Size = new System.Drawing.Size(283, 24);
+            this.labelMeasResult.Size = new System.Drawing.Size(236, 20);
             this.labelMeasResult.TabIndex = 5;
             this.labelMeasResult.Text = "RESULTADO DO MEAS CODE";
             // 
@@ -238,7 +238,7 @@ namespace FODFailureLogAutomation
             this.labelMeasDescription.AutoSize = true;
             this.labelMeasDescription.Location = new System.Drawing.Point(28, 278);
             this.labelMeasDescription.Name = "labelMeasDescription";
-            this.labelMeasDescription.Size = new System.Drawing.Size(280, 24);
+            this.labelMeasDescription.Size = new System.Drawing.Size(233, 20);
             this.labelMeasDescription.TabIndex = 4;
             this.labelMeasDescription.Text = "DESCRIÇÃO DO MEAS CODE";
             // 
@@ -290,7 +290,7 @@ namespace FODFailureLogAutomation
             this.labelProvider.AutoSize = true;
             this.labelProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProvider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelProvider.Location = new System.Drawing.Point(136, 14);
+            this.labelProvider.Location = new System.Drawing.Point(174, 14);
             this.labelProvider.Name = "labelProvider";
             this.labelProvider.Size = new System.Drawing.Size(0, 26);
             this.labelProvider.TabIndex = 25;
@@ -300,9 +300,9 @@ namespace FODFailureLogAutomation
             this.labelProviderName.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.labelProviderName.AutoSize = true;
             this.labelProviderName.ForeColor = System.Drawing.Color.Navy;
-            this.labelProviderName.Location = new System.Drawing.Point(14, 22);
+            this.labelProviderName.Location = new System.Drawing.Point(6, 20);
             this.labelProviderName.Name = "labelProviderName";
-            this.labelProviderName.Size = new System.Drawing.Size(196, 24);
+            this.labelProviderName.Size = new System.Drawing.Size(163, 20);
             this.labelProviderName.TabIndex = 24;
             this.labelProviderName.Text = "Nome do Fornecedor:";
             // 
@@ -311,7 +311,7 @@ namespace FODFailureLogAutomation
             this.labelImgFailure.AutoSize = true;
             this.labelImgFailure.Location = new System.Drawing.Point(15, 22);
             this.labelImgFailure.Name = "labelImgFailure";
-            this.labelImgFailure.Size = new System.Drawing.Size(132, 24);
+            this.labelImgFailure.Size = new System.Drawing.Size(110, 20);
             this.labelImgFailure.TabIndex = 18;
             this.labelImgFailure.Text = "Nome da Foto";
             // 
@@ -385,7 +385,7 @@ namespace FODFailureLogAutomation
             this.labelDirectory.AutoSize = true;
             this.labelDirectory.Location = new System.Drawing.Point(16, 248);
             this.labelDirectory.Name = "labelDirectory";
-            this.labelDirectory.Size = new System.Drawing.Size(146, 24);
+            this.labelDirectory.Size = new System.Drawing.Size(122, 20);
             this.labelDirectory.TabIndex = 22;
             this.labelDirectory.Text = "Diretório do Log";
             // 

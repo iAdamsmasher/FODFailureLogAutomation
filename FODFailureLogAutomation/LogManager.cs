@@ -54,6 +54,7 @@ namespace FODFailureLogAutomation
                             string line;
                             while ((line = reader.ReadLine()) != null)
                             {
+                               // line = line.ToUpper();
                                 if (line.Contains("Fail,0x"))
                                     linkLogWithBoxesGodix(line);
                             }
@@ -135,7 +136,7 @@ namespace FODFailureLogAutomation
                 string lineParameter;
                 while ((lineParameter = GodixParameters.ReadLine()) != null)
                 {
-                    if (lineParameter.Contains(LogFailureCode))
+                    if (lineParameter.Contains(LogFailureCode.ToUpper()))
                     {
                         string[] description = lineParameter.Split(';');
                         frmMn.listBoxMeasCode2.Items.Add(description[1]);
