@@ -26,6 +26,7 @@ namespace FODFailureLogAutomation
         }
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            defineProgressBar();
             logManager = new LogManager();
             logManager.clearAllLog();
             if (textBoxTrackId.TextLength != 10)
@@ -46,6 +47,22 @@ namespace FODFailureLogAutomation
                 labelSearching.Text = "Log found!!!!";
             }
         }
+        public void progressBarUpDate(int value)
+        {
+            if (progressBarTrackId.Value == 100)
+            {
+
+            }
+            else
+                progressBarTrackId.Value += value;
+        }
+        public void defineProgressBar()
+        {
+            progressBarTrackId.Minimum = 0;
+            progressBarTrackId.Maximum = 100;
+            progressBarTrackId.Value = 0;
+        }
+
         private void comboBoxFailurePictures_SelectedIndexChanged(object sender, EventArgs e)
         {
             string pictureName = string.Empty;

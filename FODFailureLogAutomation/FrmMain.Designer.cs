@@ -64,6 +64,7 @@ namespace FODFailureLogAutomation
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelSearching = new System.Windows.Forms.Label();
+            this.progressBarTrackId = new System.Windows.Forms.ProgressBar();
             this.groupBox2.SuspendLayout();
             this.tabControlFinger.SuspendLayout();
             this.TabEgis.SuspendLayout();
@@ -204,7 +205,7 @@ namespace FODFailureLogAutomation
             this.TabGodix.Location = new System.Drawing.Point(4, 29);
             this.TabGodix.Name = "TabGodix";
             this.TabGodix.Padding = new System.Windows.Forms.Padding(3);
-            this.TabGodix.Size = new System.Drawing.Size(1202, 791);
+            this.TabGodix.Size = new System.Drawing.Size(1202, 789);
             this.TabGodix.TabIndex = 1;
             this.TabGodix.Text = "Godix";
             this.TabGodix.UseVisualStyleBackColor = true;
@@ -359,11 +360,12 @@ namespace FODFailureLogAutomation
             // 
             // buttonSearch
             // 
-            this.buttonSearch.BackColor = System.Drawing.Color.Silver;
+            this.buttonSearch.BackColor = System.Drawing.SystemColors.Control;
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(298, 192);
+            this.buttonSearch.ForeColor = System.Drawing.Color.Green;
+            this.buttonSearch.Location = new System.Drawing.Point(267, 181);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(302, 42);
+            this.buttonSearch.Size = new System.Drawing.Size(155, 53);
             this.buttonSearch.TabIndex = 20;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -372,18 +374,18 @@ namespace FODFailureLogAutomation
             // labelDeveloperName
             // 
             this.labelDeveloperName.AutoSize = true;
-            this.labelDeveloperName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeveloperName.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelDeveloperName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeveloperName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.labelDeveloperName.Location = new System.Drawing.Point(12, 882);
             this.labelDeveloperName.Name = "labelDeveloperName";
-            this.labelDeveloperName.Size = new System.Drawing.Size(321, 20);
+            this.labelDeveloperName.Size = new System.Drawing.Size(256, 17);
             this.labelDeveloperName.TabIndex = 21;
             this.labelDeveloperName.Text = "Developed by Matheus Paiva/A.Patricio";
             // 
             // labelDirectory
             // 
             this.labelDirectory.AutoSize = true;
-            this.labelDirectory.Location = new System.Drawing.Point(16, 248);
+            this.labelDirectory.Location = new System.Drawing.Point(16, 267);
             this.labelDirectory.Name = "labelDirectory";
             this.labelDirectory.Size = new System.Drawing.Size(122, 20);
             this.labelDirectory.TabIndex = 22;
@@ -391,7 +393,7 @@ namespace FODFailureLogAutomation
             // 
             // textBoxDirectory
             // 
-            this.textBoxDirectory.Location = new System.Drawing.Point(14, 269);
+            this.textBoxDirectory.Location = new System.Drawing.Point(14, 294);
             this.textBoxDirectory.Name = "textBoxDirectory";
             this.textBoxDirectory.Size = new System.Drawing.Size(472, 26);
             this.textBoxDirectory.TabIndex = 23;
@@ -430,12 +432,20 @@ namespace FODFailureLogAutomation
             this.labelSearching.Size = new System.Drawing.Size(0, 22);
             this.labelSearching.TabIndex = 25;
             // 
+            // progressBarTrackId
+            // 
+            this.progressBarTrackId.Location = new System.Drawing.Point(20, 234);
+            this.progressBarTrackId.Name = "progressBarTrackId";
+            this.progressBarTrackId.Size = new System.Drawing.Size(402, 20);
+            this.progressBarTrackId.TabIndex = 26;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1892, 906);
+            this.Controls.Add(this.progressBarTrackId);
             this.Controls.Add(this.labelSearching);
             this.Controls.Add(this.buttonDirectory);
             this.Controls.Add(this.textBoxDirectory);
@@ -505,6 +515,7 @@ namespace FODFailureLogAutomation
         public System.Windows.Forms.ListBox listBoxMeasResult;
         public System.Windows.Forms.ListBox listBoxMeasDescription;
         private System.Windows.Forms.Label labelSearching;
+        private System.Windows.Forms.ProgressBar progressBarTrackId;
     }
 }
 

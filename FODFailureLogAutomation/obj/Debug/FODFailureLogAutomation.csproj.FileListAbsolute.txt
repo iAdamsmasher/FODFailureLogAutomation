@@ -1,7 +1,6 @@
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.FrmMain.resources
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.Properties.Resources.resources
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.csproj.GenerateResource.cache
-C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.csproj.CoreCompileInputs.cache
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\bin\Debug\FODFailureLogAutomation.exe.config
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\bin\Debug\FODFailureLogAutomation.exe
 C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\bin\Debug\FODFailureLogAutomation.pdb
@@ -17,4 +16,3 @@ C:\DEVELOPMENT PROJECTS\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debu
 C:\DEVELOPMENT PROJECTS\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.exe
 C:\DEVELOPMENT PROJECTS\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.pdb
 C:\DEVELOPMENT PROJECTS\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.csprojAssemblyReference.cache
-C:\DevelopmentProjects\FODFailureLogAutomation\FODFailureLogAutomation\obj\Debug\FODFailureLogAutomation.csproj.AssemblyReference.cache

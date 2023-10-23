@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -79,6 +79,7 @@ namespace FODFailureLogAutomation
                 {
                     foreach (string pictureName in Directory.GetFiles(folderName, strPicturePattern, SearchOption.AllDirectories))
                     {
+                        frmMn.progressBarUpDate(2);
                         frmMn.comboBoxFailurePictures.Items.Add(pictureName);
                         pictureModelCheck = "Egis";
                     }
